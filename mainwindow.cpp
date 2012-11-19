@@ -14,30 +14,43 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
     QAbstractListModel * model = new GameOfLifePatternModel(this);
     ui->treeView->setModel(model);
 
-    GameOfLifeScene * scene = new GameOfLifeScene(this);
+    scene = new GameOfLifeScene(0, 0, 10000, 10000, this);
     ui->graphicsView->setScene(scene);
 
     connect (ui->treeView, SIGNAL(selectedPatternChanged(const GenGolPatternPtr&)),
              scene, SLOT(patternSelected(const GenGolPatternPtr&)) );
-
-    ui->actionZoom_In->setIcon( QIcon::fromTheme("zoom-in" ) );
-
-    connect( ui->actionZoom_In, SIGNAL( triggered()),
-             ui->graphicsView , SLOT(ZoomIn()) );
-    connect( ui->actionZoom_Out, SIGNAL( triggered()),
-             ui->graphicsView , SLOT(ZoomOut()) );
-    connect( ui->actionZoom_Original, SIGNAL( triggered()),
-             ui->graphicsView , SLOT(ZoomOriginal()) );
-    connect( ui->actionZoom_Fit, SIGNAL( triggered()),
-             ui->graphicsView , SLOT(ZoomFit()) );
 
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_actionStart_triggered()
+{
+    scene->Start();
+}
+
+void MainWindow::on_actionZoom_Fit_triggered()
+{
+    ui->graphicsView->ZoomFit();
+}
+
+void MainWindow::on_actionZoom_Original_triggered()
+{
+    ui->graphicsView->ZoomOriginal();
+}
+
+void MainWindow::on_actionZoom_Out_triggered()
+{
+    ui->graphicsView->ZoomOut();
+}
+
+void MainWindow::on_actionZoom_In_triggered()
+{
+    ui->graphicsView->ZoomIn();
 }

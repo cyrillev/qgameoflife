@@ -20,23 +20,13 @@ GameOfLifeView::GameOfLifeView(QWidget *parent) :
     setViewportUpdateMode( QGraphicsView::FullViewportUpdate );
     setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
 
-    setSceneRect(-1000,-1000,2000,2000);
-    SetGridInterval(10);
-
     ZoomOriginal();
-}
-
-
-void GameOfLifeView::SetGridInterval(int interval)
-{
-    gridInterval = interval;
-    update();
 }
 
 
 void GameOfLifeView::ZoomIn()
 {
-    setZoomLevel( _zoomLevel + .1 );
+    setZoomLevel( _zoomLevel + 0.1 );
 }
 
 void GameOfLifeView::ZoomOriginal()
@@ -46,12 +36,12 @@ void GameOfLifeView::ZoomOriginal()
 
 void GameOfLifeView::ZoomOut()
 {
-    setZoomLevel( _zoomLevel - .1 );
+    setZoomLevel( _zoomLevel - 0.1 );
 }
 
 void GameOfLifeView::setZoomLevel(double zoom)
 {
-    _zoomLevel = zoom;
+    _zoomLevel = zoom*10;
 
     QMatrix oldMatrix = matrix();
     resetMatrix();
@@ -80,7 +70,7 @@ void GameOfLifeView::drawBackground(QPainter* painter, const QRectF& rect)
     qreal sx = t.m11();
     qreal sy = t.m22();
 
-    int interval = gridInterval; //interval to draw grid lines at
+    int interval = 1; //interval to draw grid lines at
 
     while (interval*sx < 5 || interval*sy < 5)
     {

@@ -11,12 +11,12 @@
 #include <boost/utility.hpp>
 #include <boost/filesystem.hpp>
 
+#include "golmodel.h"
+
 class GenGolPattern;
 typedef std::tr1::shared_ptr<const GenGolPattern> GenGolPatternPtr;
 
 
-typedef unsigned int coord_t;
-typedef std::pair<coord_t, coord_t> point_t;
 
 class gengol_rle_exception : public std::exception
 {

@@ -6,16 +6,22 @@
 #include "model/gameoflifepatternmodel.h"
 #include "view/cellgraphicsitem.h"
 
-GameOfLifeScene::GameOfLifeScene(QObject *parent) :
-    QGraphicsScene(parent),
-    _grid_space(10)
+GameOfLifeScene::GameOfLifeScene(qreal x, qreal y, qreal width, qreal height, QObject *parent) :
+    QGraphicsScene(x, y, width, height, parent),
+    _model()
 {
+    connect(&_timer, SIGNAL(timeout()),
+            this,   SLOT(requestNewGeneration()));
+
     // No index is applied. Item location is of linear complexity,
     // as all items on the scene are searched.
     // Adding, moving and removing items, however, is done in constant time.
     // This approach is ideal for dynamic scenes,
     // where many items are added, moved or removed continuously.
     // setItemIndexMethod(QGraphicsScene::NoIndex);
+
+    _connection = _model.connect(
+                boost::bind( &GameOfLifeScene::onCellChanged, this, _1, _2) );
 }
 
 void GameOfLifeScene::patternSelected(const GenGolPatternPtr &pattern)
@@ -30,18 +36,38 @@ void GameOfLifeScene::addSelectedPatternAt(const QPointF &pos)
     std::vector<point_t>::const_iterator it;
     for (it = cells.begin(); it != cells.end(); ++it)
     {
-        point_t coord = (*it);
-        CellGraphicsItem * item = new CellGraphicsItem(0,0, _grid_space, _grid_space);
-        addItem(item);
-        item->setPos(pos.x() + coord.first *_grid_space, pos.y() + coord.second *_grid_space  );
+        point_t point = (*it);
+        const coord_t x = static_cast<coord_t>(pos.x() + point.first);
+        const coord_t y = static_cast<coord_t>(pos.y() + point.second);
+        _model.setData(x, y, GolModel::ALIVE);
     }
 }
-void GameOfLifeScene::addCellAt(const QPointF &pos)
+
+void GameOfLifeScene::onCellChanged(const point_t point, GolModel::Status status)
 {
-    CellGraphicsItem * item = new CellGraphicsItem(0,0, _grid_space, _grid_space);
-    addItem(item);
-    item->setPos(pos);
+    if (status == GolModel::ALIVE)
+    {
+        CellGraphicsItem * item = new CellGraphicsItem();
+        addItem(item); // This scene takes ownership of the item.
+        item->setPos(point.first, point.second);
+    }
+    else
+    {
+        QGraphicsItem * item = itemAt(point.first, point.second );
+        removeItem(item);
+    }
 }
+
+void GameOfLifeScene::Start()
+{
+    _timer.start();
+}
+
+void GameOfLifeScene::requestNewGeneration()
+{
+    _model.nextGeneration();
+}
+
 
 void GameOfLifeScene::mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent)
 {

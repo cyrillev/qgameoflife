@@ -2,8 +2,10 @@
 #define GAMEOFLIFESCENE_H
 
 #include <QGraphicsScene>
+#include <QTimer>
 
 #include "model/gameoflifepatternmodel.h"
+#include "generic/model/golmodel.h"
 
 class QGraphicsItem;
 
@@ -11,14 +13,20 @@ class GameOfLifeScene : public QGraphicsScene
 {
     Q_OBJECT
 public:
-    explicit GameOfLifeScene(QObject *parent = 0);
+    explicit GameOfLifeScene(qreal x, qreal y, qreal width, qreal height, QObject *parent = 0);
 
     void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent);
-    void addCellAt(const QPointF &pos);
+
     void addSelectedPatternAt(const QPointF &pos);
+    void onCellChanged(const point_t point, GolModel::Status status);
+
+
 signals:
 
 public slots:
+    void Start();
+    void requestNewGeneration();
+
     void patternSelected(const GenGolPatternPtr &pattern);
 
 protected:
@@ -28,8 +36,12 @@ protected:
     virtual void dragMoveEvent( QGraphicsSceneDragDropEvent * event );
 
 private:
+    QTimer _timer;
+
+    GolModel _model;
+    GolModel::connection_t  _connection;
+
     GenGolPatternPtr _selectedPattern;
-    int _grid_space;
 };
 
 #endif // GAMEOFLIFESCENE_H

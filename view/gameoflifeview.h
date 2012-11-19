@@ -3,7 +3,7 @@
 
 #include <QGraphicsView>
 #include <memory>
-#include <model/golmodel.h>
+#include <generic/model/golmodel.h>
 
 class GameOfLifeScene;
 
@@ -13,11 +13,6 @@ class GameOfLifeView : public QGraphicsView
 public:
     GameOfLifeView(QWidget *parent = 0);
 
-    void SetGridInterval(int interval);
-
-signals:
-
-public slots:
     void setZoomLevel(double zoom);
     void ZoomIn();
     void ZoomOriginal();
@@ -25,6 +20,10 @@ public slots:
     void ZoomFit();
     void scaleView(qreal scaleFactor);
     void patternSelected(QString name);
+signals:
+
+public slots:
+
 
 protected:
     // reimplemented from QGraphicsView
@@ -36,10 +35,8 @@ private:
     Q_DISABLE_COPY(GameOfLifeView)
 
     GameOfLifeScene *_scene;
-    GolModel model;
 
     double _zoomLevel;
-    int gridInterval;
 
     QString _patternSelected;
 };
