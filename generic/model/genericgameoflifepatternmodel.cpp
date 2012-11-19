@@ -117,6 +117,7 @@ GenGolPattern::GenGolPattern(const filesystem::path& filename)
                "[[:space:]]*,[[:space:]]*"         // ,
                "y[[:space:]]*=[[:space:]]*(\\d+)"  // y = number
                "([[:space:]]*,[[:space:]]*rule[[:space:]]*=[[:space:]]*B(\\d+)/S(\\d+)(:T(\\d+),(\\d+))?)?" // , rule = B3678/S34678
+               "\r?$"
                );
 
     smatch match;
@@ -203,7 +204,13 @@ void GenGolPatternModel::addDirectory(const filesystem::path &directory, bool re
             path p(*it);
             if ( p.extension() == ".rle" )
             {
-                _model.push_back( GenGolPatternPtr(new GenGolPattern(*it)) );
+                try
+                {
+                    _model.push_back( GenGolPatternPtr(new GenGolPattern(*it)) );
+                } catch(...)
+                {
+                    std::cout << "got exception while reading RLE file " << p << std::endl;
+                }
             }
         }
     }
