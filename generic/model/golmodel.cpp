@@ -64,6 +64,26 @@ unsigned int GolModel::numberOfNeighbours(const point_t &point)
     return result;
 }
 
+
+bool operator==(GolModel::status_t const& status1, GolModel::status_t const& status2)
+{
+    point_t p1 = status1.first;
+    point_t p2 = status2.first;
+    GolModel::Status s1 = status1.second;
+    GolModel::Status s2 = status2.second;
+    return p1.first == p2.first && p1.second && p2.second && s1 == s2;
+}
+
+std::size_t hash_value(GolModel::status_t const& status)
+{
+    point_t point = status.first;
+    std::size_t seed = 0;
+    boost::hash_combine(seed, point.first);
+    boost::hash_combine(seed, point.second);
+    boost::hash_combine(seed, status.second);
+    return seed;
+}
+
 void GolModel::nextGeneration()
 {
     boost::unordered_set<status_t> new_generation;
