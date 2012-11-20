@@ -1,0 +1,710 @@
+<html><head><title>Life Object Counts</title>
+<meta name="description"
+content="Conway's Game of Life:  Object counts and syntheses">
+<meta name="keywords" content="conway game life object count glider synthesis">
+</head><body>
+
+<h1><center>Life Object Counts</center></h1>
+
+<center>
+	<a href="#still">Still-lifes and pseudo-still-lifes</a> |
+	<a href="#object">Objects</a> |
+	<a href="#pseudo-object">Pseudo-objects</a> |
+	<a href="#c/2 spaceship"><i>c</i>/2 Spaceships</a> |
+	<a href="#other spaceship">Other spaceships</a>
+</center><br><br>
+
+Numbers in <b>bold face</b> have been confirmed by computer search.
+
+<hr>
+<a name="still"></a>
+<h2>Still-lifes and pseudo-still-lifes up to 24 bits:</h2>
+<table cellspacing=1 border=1>
+    <tr>
+	<td><b>Bits</b></td>
+	<td><a href="4bits.htm"><b>4</b></a></td>
+	<td><a href="5bits.htm"><b>5</b></a></td>
+	<td><a href="6bits.htm"><b>6</b></a></td>
+	<td><a href="7bits.htm"><b>7</b></a></td>
+	<td><a href="8bits.htm"><b>8</b></a></td>
+	<td><a href="9bits.htm"><b>9</b></a></td>
+	<td><a href="10bits.htm"><b>10</b></a></td>
+	<td><a href="11bits.htm"><b>11</b></a></td>
+	<td><a href="12bits.htm"><b>12</b></a></td>
+	<td><a href="13bits.htm"><b>13</b></a></td>
+	<td><a href="14bits.htm"><b>14</b></a></td>
+	<td><a href="15bits.htm"><b>15</b></a></td>
+	<td><a href="16bits.htm"><b>16</b></a></td>
+	<td><a href="17bits.htm"><b>17</b></a></td>
+	<td><a href="18bits.htm"><b>18</b></a></td>
+	<td><a href="19bits.htm"><b>19</b></a></td>
+	<td><a href="20bits.htm"><b>20</b></a></td>
+	<td><b>21</b></td>
+	<td><b>22</b></td>
+	<td><b>23</b></td>
+	<td><b>24</b></td>
+    </tr>
+
+    <tr>
+	<td><a href="still.htm"><b>Still-lifes</b></a></td>
+	<td><a href="still.htm#4-bit still"><b>2</b></a></td>
+	<td><a href="still.htm#5-bit still"><b>1</b></a></td>
+	<td><a href="still.htm#6-bit still"><b>5</b></a></td>
+	<td><a href="still.htm#7-bit still"><b>4</b></a></td>
+	<td><a href="still.htm#8-bit still"><b>9</b></a></td>
+	<td><a href="still.htm#9-bit still"><b>10</b></a></td>
+	<td><a href="still.htm#10-bit still"><b>25</b></a></td>
+	<td><a href="still.htm#11-bit still"><b>46</b></a></td>
+	<td><a href="still12.htm"><b>121</b></a></td>
+	<td><a href="still13.htm"><b>240</b></a></td>
+	<td><a href="still14.htm"><b>619</b></a></td>
+	<td><a href="still15.htm"><b>1353</b></a></td>
+	<td><a href="still16.htm"><b>3286</b></a></td>
+	<td><a href="still17.htm"><b>7773</b></a></td>
+	<td><b>19044</b></td>
+	<td><b>45759</b></td>
+	<td><b>112243</b></td>
+	<td><b>273188</b></td>
+	<td><b>672172</b></td>
+	<td><b>1646147</b></td>
+	<td><b>4051711</b></td>
+    </tr>
+
+    <tr>
+	<td><a href="pstill.htm"><b>Pseudo-still-lifes</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="pstill.htm#8-bit pseudo-still"><b>1</b></a></td>
+	<td><a href="pstill.htm#9-bit pseudo-still"><b>1</b></a></td>
+	<td><a href="pstill.htm#10-bit pseudo-still"><b>7</b></a></td>
+	<td><a href="pstill.htm#11-bit pseudo-still"><b>16</b></a></td>
+	<td><a href="pstill.htm#12-bit pseudo-still"><b>55</b></a></td>
+	<td><a href="pstill13.htm"><b>110</b></a></td>
+	<td><a href="pstill14.htm"><b>279</b></a></td>
+	<td><a href="pstill15.htm"><b>620</b></a></td>
+	<td><b>1645</b></td>
+	<td><b>4067</b></td>
+	<td><b>10843</b></td>
+	<td><b>27250</b></td>
+	<td><b>70637</b></td>
+	<td><b>179011</b></td>
+	<td><b>462086</b></td>
+	<td><b>1184882</b></td>
+	<td><b>3068984</b></td>
+    </tr>
+</table><br>
+
+<hr>
+<a name="object"></a>
+<h2>Objects up to 20 bits:</h2>
+<table cellspacing=1 border=1>
+    <tr>
+	<td><b>Bits</b></td>
+	<td><a href="3bits.htm"><b>3</b></a></td>
+	<td><a href="4bits.htm"><b>4</b></a></td>
+	<td><a href="5bits.htm"><b>5</b></a></td>
+	<td><a href="6bits.htm"><b>6</b></a></td>
+	<td><a href="7bits.htm"><b>7</b></a></td>
+	<td><a href="8bits.htm"><b>8</b></a></td>
+	<td><a href="9bits.htm"><b>9</b></a></td>
+	<td><a href="10bits.htm"><b>10</b></a></td>
+	<td><a href="11bits.htm"><b>11</b></a></td>
+	<td><a href="12bits.htm"><b>12</b></a></td>
+	<td><a href="13bits.htm"><b>13</b></a></td>
+	<td><a href="14bits.htm"><b>14</b></a></td>
+	<td><a href="15bits.htm"><b>15</b></a></td>
+	<td><a href="16bits.htm"><b>16</b></a></td>
+	<td><a href="17bits.htm"><b>17</b></a></td>
+	<td><a href="18bits.htm"><b>18</b></a></td>
+	<td><a href="19bits.htm"><b>19</b></a></td>
+	<td><a href="20bits.htm"><b>20</b></a></td>
+    </tr>
+
+    <tr>
+	<td><a href="still.htm"><b>Still-lifes</b></a></td>
+	<td>0</td>
+	<td><a href="still.htm#4-bit still"><b>2</b></a></td>
+	<td><a href="still.htm#5-bit still"><b>1</b></a></td>
+	<td><a href="still.htm#6-bit still"><b>5</b></a></td>
+	<td><a href="still.htm#7-bit still"><b>4</b></a></td>
+	<td><a href="still.htm#8-bit still"><b>9</b></a></td>
+	<td><a href="still.htm#9-bit still"><b>10</b></a></td>
+	<td><a href="still.htm#10-bit still"><b>25</b></a></td>
+	<td><a href="still.htm#11-bit still"><b>46</b></a></td>
+	<td><a href="still12.htm"><b>121</b></a></td>
+	<td><a href="still13.htm"><b>240</b></a></td>
+	<td><a href="still14.htm"><b>619</b></a></td>
+	<td><a href="still15.htm"><b>1353</b></a></td>
+	<td><a href="still16.htm"><b>3286</b></a></td>
+	<td><a href="still17.htm"><b>7773</b></a></td>
+	<td><b>19044</b></td>
+	<td><b>45759</b></td>
+	<td><b>112243</b></td>
+    </tr>
+
+    <tr>
+	<td><a href="p2osc.htm"><b>P2 oscillators</b></a></td>
+	<td><a href="p2osc.htm#3-bit p2"><b>1</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="p2osc.htm#6-bit p2"><b>3</b></a></td>
+	<td><b>0</b></td>
+	<td><a href="p2osc.htm#8-bit p2"><b>1</b></a></td>
+	<td><a href="p2osc.htm#9-bit p2"><b>1</b></a></td>
+	<td><a href="p2osc.htm#10-bit p2"><b>1</b></a></td>
+	<td><a href="p2osc.htm#11-bit p2"><b>1</b></a></td>
+	<td><a href="p2osc.htm#12-bit p2"><b>6</b></a></td>
+	<td><a href="p2osc.htm#13-bit p2"><b>3</b></a></td>
+	<td><a href="p2osc.htm#14-bit p2"><b>20</b></a></td>
+	<td><a href="p2osc.htm#15-bit p2"><b>29</b></a></td>
+	<td><a href="p2osc16.htm"><b>98</b></a></td>
+	<td><a href="p2osc17.htm"><b>199</b></a></td>
+	<td><a href="p2osc18.htm"><b>484</b></a></td>
+	<td><a href="p2osc.htm#19-bit p2"><b>1083</b></a></td>
+	<td><a href="p2osc.htm#20-bit p2">?</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p3osc.htm"><b>P3 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="p3osc.htm#12-bit p3"><b>1</b></a></td>
+	<td><a href="p3osc.htm#13-bit p3"><b>1</b></a></td>
+	<td><a href="p3osc.htm#14-bit p3"><b>1</b></a></td>
+	<td>0</td>
+	<td><a href="p3osc.htm#16-bit p3">7</a></td>
+	<td><a href="p3osc.htm#17-bit p3">8</a></td>
+	<td><a href="p3osc.htm#18-bit p3">39</a></td>
+	<td><a href="p3osc.htm#19-bit p3">64</a></td>
+	<td><a href="p3osc20.htm">199</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p4osc.htm"><b>P4 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="p4osc.htm#12-bit p4"><b>2</b></a></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p4osc.htm#18-bit p4">3</a></td>
+	<td><a href="p4osc.htm#19-bit p4">7</a></td>
+	<td><a href="p4osc.htm#20-bit p4">23</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p5osc.htm"><b>P5 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p5osc.htm#15-bit p5">1</a></td>
+	<td><a href="p5osc.htm#16-bit p5">1</a></td>
+	<td>0</td>
+	<td><a href="p5osc.htm#18-bit p5">1</a></td>
+	<td><a href="p5osc.htm#19-bit p5">1</a></td>
+	<td><a href="p5osc.htm#20-bit p5">5</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p6osc.htm"><b>P6 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p6osc.htm#16-bit p6">1</a></td>
+	<td>0</td>
+	<td><a href="p6osc.htm#18-bit p6">4</a></td>
+	<td>0</td>
+	<td><a href="p6osc.htm#20-bit p6">10</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p8osc.htm"><b>P8 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td><a href="p8osc.htm#12-bit p8">1</a></td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p8osc.htm#15-bit p8">1</a></td>
+	<td>0</td>
+	<td><a href="p8osc.htm#17-bit p8">2</a></td>
+	<td><a href="p8osc.htm#18-bit p8">1</a></td>
+	<td>0</td>
+	<td>0</td>
+    </tr>
+
+    <tr>
+	<td><a href="oscillat.htm#p14"><b>P14 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="oscillat.htm#p14">1</a></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+    </tr>
+
+    <tr>
+	<td><a href="p15osc.htm"><b>P15 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td><a href="p15osc.htm#12-bit p15">1</a></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p15osc.htm#19-bit p15">1</a></td>
+	<td>0</td>
+    </tr>
+
+    <tr>
+	<td><a href="p30osc.htm"><b>P30 oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p30osc.htm#20-bit p30">2</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="sship.htm"><b>Spaceships</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#5-bit spaceship"><b>1</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#9-bit spaceship"><b>1</b></a></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#11-bit spaceship">1</a></td>
+	<td>0</td>
+	<td><a href="sship.htm#13-bit spaceship">1</a></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="sship.htm#20-bit spaceship">5</a></td>
+    </tr>
+</table><br>
+
+<hr>
+<a name="pseudo-object"></a>
+<h2>Pseudo-objects up to 20 bits:</h2>
+<table cellspacing=1 border=1>
+    <tr>
+	<td><b>Bits</b></td>
+	<td><a href="8bits.htm"><b>8</b></a></td>
+	<td><a href="9bits.htm"><b>9</b></a></td>
+	<td><a href="10bits.htm"><b>10</b></a></td>
+	<td><a href="11bits.htm"><b>11</b></a></td>
+	<td><a href="12bits.htm"><b>12</b></a></td>
+	<td><a href="13bits.htm"><b>13</b></a></td>
+	<td><a href="14bits.htm"><b>14</b></a></td>
+	<td><a href="15bits.htm"><b>15</b></a></td>
+	<td><a href="16bits.htm"><b>16</b></a></td>
+	<td><a href="17bits.htm"><b>17</b></a></td>
+	<td><a href="18bits.htm"><b>18</b></a></td>
+	<td><a href="19bits.htm"><b>19</b></a></td>
+	<td><a href="20bits.htm"><b>20</b></a></td>
+    </tr>
+
+    <tr>
+	<td><a href="pstill.htm"><b>Pseudo-still-lifes</b></a></td>
+	<td><a href="pstill.htm#8-bit pseudo-still"><b>1</b></a></td>
+	<td><a href="pstill.htm#9-bit pseudo-still"><b>1</b></a></td>
+	<td><a href="pstill.htm#10-bit pseudo-still"><b>7</b></a></td>
+	<td><a href="pstill.htm#11-bit pseudo-still"><b>16</b></a></td>
+	<td><a href="pstill.htm#12-bit pseudo-still"><b>55</b></a></td>
+	<td><a href="pstill13.htm"><b>110</b></a></td>
+	<td><a href="pstill14.htm"><b>279</b></a></td>
+	<td><a href="pstill15.htm"><b>620</b></a></td>
+	<td><b>1645</b></td>
+	<td><b>4067</b></td>
+	<td><b>10843</b></td>
+	<td><b>27250</b></td>
+	<td><b>70637</b></td>
+    </tr>
+
+    <tr>
+	<td><a href="pp2osc.htm"><b>P2 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="pp2osc.htm#10-bit pseudo-p2"><b>1</b></a></td>
+	<td><a href="pp2osc.htm#11-bit pseudo-p2"><b>2</b></a></td>
+	<td><a href="pp2osc.htm#12-bit pseudo-p2"><b>14</b></a></td>
+	<td><a href="pp2osc.htm#13-bit pseudo-p2"><b>17</b></a></td>
+	<td><a href="pp2osc.htm#14-bit pseudo-p2"><b>46</b></a></td>
+	<td><a href="pp2osc15.htm"><b>78</b></a></td>
+	<td><a href="pp2osc16.htm"><b>225</b></a></td>
+	<td><b>484</b></td>
+	<td><b>1519</b></td>
+	<td><b>3350</b></td>
+	<td>?</td>
+    </tr>
+
+    <tr>
+	<td><a href="p3osc.htm"><b>P3 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="p3osc.htm#17-bit pseudo-p3"><b>2</b></a></td>
+	<td><a href="p3osc.htm#18-bit pseudo-p3"><b>5</b></a></td>
+	<td><a href="p3osc.htm#19-bit pseudo-p3">20</a></td>
+	<td><a href="p3osc.htm#20-bit pseudo-p3">45</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p4osc.htm"><b>P4 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="p4osc.htm#16-bit pseudo-p4"><b>1</b></a></td>
+	<td><a href="p4osc.htm#17-bit pseudo-p4">2</a></td>
+	<td><a href="p4osc.htm#18-bit pseudo-p4">11</a></td>
+	<td><a href="p4osc.htm#19-bit pseudo-p4">14</a></td>
+	<td><a href="p4osc.htm#20-bit pseudo-p4">33</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p5osc.htm"><b>P5 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p5osc.htm#19-bit pseudo-p5">2</a></td>
+	<td><a href="p5osc.htm#20-bit pseudo-p5">4</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p6osc.htm"><b>P6 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p6osc.htm#19-bit pseudo-p6">4</a></td>
+	<td><a href="p6osc.htm#20-bit pseudo-p6">3</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p8osc.htm"><b>P8 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p8osc.htm#18-bit pseudo-p8">2</a></td>
+	<td><a href="p8osc.htm#19-bit pseudo-p8">1</a></td>
+	<td><a href="p8osc.htm#20-bit pseudo-p8">2</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p15osc.htm"><b>P15 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td><a href="p15osc.htm#16-bit pseudo-p15">1</a></td>
+	<td><a href="p15osc.htm#17-bit pseudo-p15">1</a></td>
+	<td><a href="p15osc.htm#18-bit pseudo-p15">5</a></td>
+	<td><a href="p15osc.htm#19-bit pseudo-p15">7</a></td>
+	<td><a href="p15osc.htm#20-bit pseudo-p15">15</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="p30osc.htm"><b>P30 pseudo-oscillators</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td><a href="p30osc.htm#18-bit pseudo-p30">1</a></td>
+	<td>0</td>
+	<td><a href="p30osc.htm#20-bit pseudo-p30">1</a></td>
+    </tr>
+
+    <tr>
+	<td><a href="sship.htm"><b>Pseudo-spaceships</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#18-bit pseudo-spaceship"><b>1</b></a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+    </tr>
+</table><br>
+
+<hr>
+<a name="c/2 spaceship"></a>
+<h2><i>c</i>/2 Spaceships:</h2>
+Most of the known Life spaceships (at least the small ones) move at a velocity
+of <i>c</i>/2.  These have a base period of 4, but some of the larger variants
+have periods which are multiples of this.<br><br>
+
+H. Koenig's computer searches have not revealed any spaceships which were
+not previously known, but they have confirmed that the previously-known lists
+of small spaceships have been complete up to 24 bits.<br><br>
+
+<table cellspacing=1 border=1>
+    <tr>
+	<td><b>Bits</b></td>
+	<td><a href="4bits.htm"><b>4</b></a></td>
+	<td><a href="5bits.htm"><b>5</b></a></td>
+	<td><a href="6bits.htm"><b>6</b></a></td>
+	<td><a href="7bits.htm"><b>7</b></a></td>
+	<td><a href="8bits.htm"><b>8</b></a></td>
+	<td><a href="9bits.htm"><b>9</b></a></td>
+	<td><a href="10bits.htm"><b>10</b></a></td>
+	<td><a href="11bits.htm"><b>11</b></a></td>
+	<td><a href="12bits.htm"><b>12</b></a></td>
+	<td><a href="13bits.htm"><b>13</b></a></td>
+	<td><a href="14bits.htm"><b>14</b></a></td>
+	<td><a href="15bits.htm"><b>15</b></a></td>
+	<td><a href="16bits.htm"><b>16</b></a></td>
+	<td><a href="17bits.htm"><b>17</b></a></td>
+	<td><a href="18bits.htm"><b>18</b></a></td>
+	<td><a href="19bits.htm"><b>19</b></a></td>
+	<td><a href="20bits.htm"><b>20</b></a></td>
+	<td><b>21</b></td>
+	<td><b>22</b></td>
+	<td><b>23</b></td>
+	<td><b>24</b></td>
+    </tr>
+
+    <tr>
+	<td><b>Orthogonal <i>c</i>/2 P4</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#9-bit spaceship"><b>1</b></a></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#11-bit spaceship">1</a></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#13-bit spaceship">1</a></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#18-bit pseudo-spaceship">
+	    <b>1</b>(pseudo)</a></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#20-bit spaceship"><b>5</b></a></td>
+	<td><b>0</b></td>
+	<td><a href="sship.htm#2-spaceship flotilla"><b>9</b></a></td>
+	<td><a href="sship.htm#2-spaceship flotilla"><b>2</b></a></td>
+	<td><a href="sship.htm#2-spaceship flotilla"><b>7</b></a></td>
+    </tr>
+</table><br>
+
+<hr>
+<a name="other spaceship"></a>
+<h2>Other spaceships:</h2>
+Except for the <a href="5gl.rle">glider</a>, Life has no small spaceships
+which move at velocities other than <i>c</i>/2.  H. Koenig's computer
+searches have not revealed any spaceships which were not previously known,
+but they have confirmed that the previously-known lists of small spaceships
+have been complete up to the following sizes:<br><br>
+
+<table cellspacing=1 border=1>
+    <tr><td><b>Direction</b></td><td><b>Velocity</b></td>
+	<td><b>Period</b></td><td><b>Synopsis</b></td></tr>
+
+    <tr><td><b>Orthogonal</b></td><td>&gt;<i>c</i>/2</td><td></td>
+	<td>None possible</td></tr>
+
+    <tr><td></td><td><a href="sship.htm#o2"><i>c</i>/2</a></td><td>P2</td>
+	<td>None up to 35 bits;  many larger<b>*</b></td></tr>
+    <tr><td></td><td></td><td>P4</td>
+	<td>Many (See <a href="#c/2 spaceship">previous section</a>)</td></tr>
+    <tr><td></td><td></td><td>P6</td><td>None up to 13 bits</td></tr>
+
+    <tr><td></td><td>3<i>c</i>/7</td><td>P7</td>
+	<td>None up to 13 bits</td></tr>
+    <tr><td></td><td><a href="sship.htm#2o5">2<i>c</i>/5</a></td><td>P5</td>
+	<td>None up to 17 bits;  some larger<b>*</b></td></tr>
+
+    <tr><td></td><td><a href="sship.htm#o3"><i>c</i>/3</a></td><td>P3</td>
+	<td>None up to 24 bits;  two 25-bit;  many larger<b>*</b></td></tr>
+    <tr><td></td><td></td><td>P6</td><td>None up to 17 bits</td></tr>
+
+    <tr><td></td><td>2<i>c</i>/7</td><td>P7</td><td>
+	None up to 11 bits</td></tr>
+    <tr><td></td><td><a href="sship.htm#o4"><i>c</i>/4</a></td><td>P4</td>
+	<td>None up to 15 bits;  many larger<b>*</b></td></tr>
+    <tr><td></td><td><a href="sship.htm#o5"><i>c</i>/5</a></td><td>P5</td>
+	<td>None up to 12 bits;  many larger<b>*</b></td></tr>
+    <tr><td></td><td><i>c</i>/6</td><td>P6</td><td>None up to 11 bits</td></tr>
+    <tr><td></td><td><i>c</i>/7</td><td>P7</td><td>None up to 10 bits</td></tr>
+
+    <tr><td><b>Diagonal</b></td><td>&gt;<i>c</i>/4</td><td></td>
+	<td>None possible</td></tr>
+
+    <tr><td></td><td><a href="sship.htm#d4"><i>c</i>/4</a></td><td>P4</td>
+	<td><a href="sship.htm#5-bit spaceship">one</a> 5-bit;
+	no others up to 15 bits;  many larger<b>*</b></td></tr>
+    <tr><td></td><td><a href="sship.htm#d12"><i>c</i>/12</a></td><td>P96</td>
+	<td>Several large ones</td></tr>
+
+    <tr><td></td><td><i>c</i>/5</td><td>P5</td><td>None up to 12 bits</td></tr>
+    <tr><td></td><td><i>c</i>/6</td><td>P6</td><td>None up to 12 bits</td></tr>
+    <tr><td></td><td><i>c</i>/7</td><td>P7</td><td>None up to 10 bits</td></tr>
+
+    <tr><td><b>Knight-move</b></td><td>&gt;<i>c</i>/3</td><td></td>
+	<td>None possible</td></tr>
+    <tr><td></td><td><i>c</i>/3</td><td>P6</td><td>None up to 14 bits</td></tr>
+    <tr><td></td><td>2<i>c</i>/7</td><td>P7</td><td>
+	None up to 11 bits</td></tr>
+
+    <tr><td><b>Oblique (<i>x</i>,<i>y</i>) <i>x</i>&gt;<i>y</i></b></td>
+	<td>&gt;<i>xc</i>/(<i>x</i>+<i>y</i>)</td><td></td>
+	<td>None possible</td></tr>
+    <tr><td></td><td>&lt;=<i>xc</i>/(<i>x</i>+<i>y</i>)</td><td></td>
+	<td>None up to 10 bits</td></tr>
+</table>
+
+Groups marked <b>*</b> are also known to include spaceships whose periods are
+larger multiples of the base period.<br><br>
+
+<hr>
+<b>See also:</b>  Life objects sorted by:
+	counts,
+	<a href="objcost.htm">gliders</a>,
+	<a href="objname.htm">name</a>,
+	<a href="objsize.htm">size</a>,
+	or <a href="objtype.htm">type</a>.<br><br>
+
+<a href="index.htm">
+<img src="homepage.gif" alt="home" align=middle width=32 height=32>
+Back to Home Page</a>
+<a href="lifepage.htm">
+<img src="lifepage.gif" alt="life" align=middle width=32 height=32>
+Back to Life Page</a><br><br>
+
+</body></html>
+
+<!-- Localized -->

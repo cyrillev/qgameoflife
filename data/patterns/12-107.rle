@@ -1,0 +1,13 @@
+x = 132, y = 95
+111bo$110bo$110b3o2$58bo$57bo$57b3o$117bo$84bobo30bobo$39bo45b2o30b2o$
+37bobo23bo21bo$38b2o23bobo$bo61b2o27bo$2bo49bo37bobo$3o48bo39b2o$51b3o
+$93bobo$50bo42b2o$28b2x21bo26b2x14bo33b2x$26bx2bx19b3o24bx2bx46bx2bx$
+26b2x2b2x44b2x2b2x44b2x2b2x$4bobo24bx49bx49bx$5b2o22bx21b2o26bx49bx$5b
+o23b2x19b2o27b2x48b2x$52bo50bo$6b3o92b2o$8bo93b2o$7bo7b2o88b3o$15bobo
+87bo$15bo90bo$58b3o$58bo$59bo$110b2o$109b2o$111bo8$108bo$106bobo$107b
+2o2$104b2o$105b2o21b2x$88b2x14bo3b2o16bx2bx$66bo21bxbx17bobo15b2x2b2x$
+64bobo3bo18b2x18b2o3b3o14bx$65b2o2b2o43bo14bx$69bobo39bo3bo13b2x$64bo
+46b2o$63b2o45bobo$63bobo17$71bo$69bobo$70b2o2$69b2o$69bobo16b2x18b2o
+18b2x$66bo2bo16bx2bx16bo2bo16bx2bx$64bobo19b2x18b2o18b2x2b2x$65b2o64bx
+$129bx$64b2o39bo23b2x$64bobo32b3obobo9bo$64bo36bo2b2o8b2o$100bo13bobo
+2$96b2o$95bobo10b3o$97bo12bo$109bo$116b3o$116bo$117bo!

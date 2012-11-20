@@ -1,0 +1,564 @@
+<html><head><title>Life Oscillators and Pseudo-Oscillators</title>
+<meta name="description"
+content="Conway's Game of Life:  Oscillator and pseudo-oscillator lists and glider syntheses">
+<meta name="keywords"
+content="conway game life pseudo oscillator object list glider synthesis">
+</head><body>
+
+<h1><center>Life Oscillators and Pseudo-Oscillators</center></h1>
+
+<center>
+	<a href="#p2">P2</a> |
+	<a href="#p3">P3</a> |
+	<a href="#p4">P4</a> |
+	<a href="#p5">P5</a> |
+	<a href="#p6">P6</a> |
+	<a href="#p7">P7</a> |
+	<a href="#p8">P8</a> |
+	<a href="#p9">P9</a> |
+	<a href="#p10">P10</a> |
+	<a href="#p12">P12</a> |
+	<a href="#p14">P14</a> |
+	<a href="#p15">P15</a> |
+	<a href="#p16">P16</a> |
+	<a href="#p18">P18</a> |
+	<a href="#p30">P30</a> |
+	<a href="#p36">P36</a> |
+	<a href="#p44">P44</a> |
+	<a href="#p45">P45</a> |
+	<a href="#p46">P46</a> |
+	<a href="#p50">P50</a> |
+	<a href="#p54">P54</a> |
+	<a href="#p56">P56</a> |
+	<a href="#p60">P60</a> |
+	<a href="#p72">P72</a> |
+	<a href="#p75">P75</a> |
+	<a href="#p88">P88</a> |
+	<a href="#p100">P100</a> |
+	<a href="#p144">P144</a>
+</center><br>
+
+In Life, naturally-occuring oscillators exist of many periods, and many
+additional periods are obtainable using highly artificial mechanisms.
+The oscillators shown here are ones which have known glider syntheses.
+(Also, some of these syntheses are infinitely extensible.)<br><br>
+
+In 1996, Buckingham revealed a suite of track components which use eaters and
+other still-lifes to move can move a Herschel heptomino (the 20th generation of
+<a href="6bh.rle">B-heptomino</a>, after it has left behind a block).
+By combining several of these, in much the same way as one assembles toy
+train tracks, one can produce circular conduits which take arbitrarily long
+to cycle a single Herschel.  By placing multiple Herschels in such a conduit,
+one can obtain oscillators of arbitrarily small periods.  (These were
+improvements over his earlier track components which used spark-producing
+oscillators as stabilizers;  unfortunately, those can only produce oscillators
+whose periods are multiples of those of the spark-producers.)<br><br>
+
+Oscillators of all periods 58 and above can be obtained in this way.
+Since Herschels naturally release gliders, this also yields glider guns of
+all periods 62 and above.  (The Herschels collide with each other if closer
+than 58 generations apart, and they collide with the escaping gliders if
+closer than 62 generations apart.)
+Recently, Dietrich Leithner has constructed oscillators of periods 56 and 57
+by adding in one of Buckingham's earlier spark-stabilized sections.<br><br>
+
+This is basically a variation of the method described by
+<a href="lifecred.htm#conway">Conway</a> in the 1970's to construct
+oscillators of arbitary period using stable glider-reflectors.
+(Currently, all known stable glider-reflectors are derived from the above,
+turning a glider into a Herschel, shuttling the Herschel, and then turning
+the Herschel back into a glider.)<br>
+
+Thus, Life has known oscillators of all periods except
+19, 23, 27, 31, 37, 38, 41, 43, 49, and 53.
+(Composite periods 33, 34, 39, and 51 are also technically unknown,
+but can be formed by combining two oscillators whose periods are the
+prime factors of the composite period.)<br><br>
+
+<hr>
+<a name="p2"></a>
+<h2>Period-2 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p2osc.htm">separate page</a>, and the pseudo-oscillators
+are shown on <a href="pp2osc.htm">another page</a>.<br>
+
+<hr>
+<a name="p3"></a>
+<h2>Period-3 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p3osc.htm">separate page</a>.<br>
+
+<hr>
+<a name="p4"></a>
+<h2>Period-4 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p4osc.htm">separate page</a>.<br>
+
+<hr>
+<a name="p5"></a>
+<h2>Period-5 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p5osc.htm">separate page</a>.<br>
+
+<hr>
+<a name="p6"></a>
+<h2>Period-6 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p6osc.htm">separate page</a>.<br>
+
+<hr>
+<a name="p7"></a>
+<h2>Period-7 Oscillators:</h2>
+<a href="p7-lg.rle">
+<img src="p7-lg.gif" alt="P7 oscs"
+ width=81 height=81 usemap="#p7-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=79><a href="p7bm.rle">
+	    Burloaf- erimiter [27]</a></td>
+    </tr>
+</table><br>
+
+<map name="p7-lg">
+	<area shape=rect coords="0,0,81,59" href="p7bm.rle">
+	<area shape=rect coords="0,60,59,81" href="p7bm.rle">
+	<area shape=rect coords="60,60,81,81" href="p7-lg.rle">
+</map>
+
+<hr>
+<a name="p8"></a>
+<h2>Period-8 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p8osc.htm">separate page</a>.<br>
+
+<hr>
+<a name="p9"></a>
+<h2>Period 9 oscillators:</h2>
+<a href="p9-lg.rle"><img src="p9-lg.gif" alt="period-9 oscillators"
+ width=601 height=141 usemap="#p9-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=117><a href="p9ly1.rle">
+	    Lonely bee [19]</a></td>
+	<td valign=top width=117><a href="p9ly2.rle">
+	    Double lonely bee [24]</a></td>
+	<td valign=top width=157><a href="p9ly3.rle">
+	    Triple lonely bee [29]</a><br>
+	    (<i>n</i> lonely bees [19+5<i>n</i>])</td>
+	<td valign=top width=199><a href="p9sr3b.rle">
+	    Cis triple snacker [25]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=117><a href="p9sr1.rle">
+	    Snacker [17]</a></td>
+	<td valign=top width=117></td>
+	<td valign=top width=157><a href="p9sr2.rle">
+	    Double snacker [20]</a></td>
+	<td valign=top width=199><a href="p9sr3a.rle">
+	    Trans triple snacker [23]</a><br>
+	    (<i>n</i> snackers [14+3<i>n</i>])</td>
+    </tr>
+</table><br>
+
+<map name="p9-lg">
+	<area shape=rect coords="0,0,119,69" href="p9ly1.rle">
+	<area shape=rect coords="120,0,239,69" href="p9ly2.rle">
+	<area shape=rect coords="240,0,399,69" href="p9ly3.rle">
+	<area shape=rect coords="400,0,601,69" href="p9sr3b.rle">
+
+	<area shape=rect coords="0,70,119,141" href="p9sr1.rle">
+	<area shape=rect coords="120,70,239,141" nohref>
+	<area shape=rect coords="240,70,399,141" href="p9sr2.rle">
+	<area shape=rect coords="400,70,601,119" href="p9sr3a.rle">
+	<area shape=rect coords="400,120,579,141" href="p9sr3a.rle">
+	<area shape=rect coords="580,120,601,141" href="p9-lg.rle">
+</map>
+
+<hr>
+<a name="p10"></a>
+<h2>Period 10 oscillators:</h2>
+<a href="p10-lg.rle"><img src="p10-lg.gif" alt="P10 oscillators"
+ width=121 height=101 usemap="#p10-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=119><a href="p10pu2b8.rle">
+	    Eight blocks hassling two pulsars [30]</a></td>
+    </tr>
+</table><br>
+
+<map name="p10-lg">
+	<area shape=rect coords="0,0,121,79" href="p10pu2b8.rle">
+	<area shape=rect coords="0,80,99,101" href="p10pu2b8.rle">
+	<area shape=rect coords="100,80,121,101" href="p10-lg.rle">
+</map>
+
+<hr>
+<a name="p12"></a>
+<h2>Period 12 oscillators:</h2>
+<a href="p12-lg.rle"><img src="p12-lg.gif" alt="period-12 oscillators"
+ width=241 height=101 usemap="#p12-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=117><a href="p12lfbk2.rle">
+	    Loaf hassled by two blocks and two caterers [52]</a></td>
+	<td valign=top width=119><a href="p12crown.rle">
+	    Crown hassled by HWSS emulator and two molds [30]</a></td>
+    </tr>
+</table><br>
+
+<map name="p12-lg">
+	<area shape=rect coords="0,0,119,101" href="p12lfbk2.rle">
+	<area shape=rect coords="120,0,241,79" href="p12crown.rle">
+	<area shape=rect coords="120,80,219,101" href="p12crown.rle">
+	<area shape=rect coords="220,80,241,101" href="p12-lg.rle">
+</map>
+
+<hr>
+<a name="p14"></a>
+<h2>The 1 <a href="16bits.htm">sixteen-bit</a> period-14 oscillator:</h2>
+<a href="p14-16.rle">
+<img src="p14-16.gif" alt="16b P14"
+ width=81 height=61 usemap="#p14-16"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=79><a href="16tu.rle">
+	    Tumbler [8]</a></td>
+    </tr>
+</table><br>
+
+<map name="p14-16">
+	<area shape=rect coords="0,0,81,39" href="16tu.rle">
+	<area shape=rect coords="0,40,59,61" href="16tu.rle">
+	<area shape=rect coords="60,40,81,61" href="p14-16.rle">
+</map>
+
+<hr>
+<a name="p15"></a>
+<h2>Period-15 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p15osc.htm">separate page</a>.<br>
+
+<hr>
+<a name="p16"></a>
+<h2>Period 16 oscillators:</h2>
+<a href="p16-lg.rle"><img src="p16-lg.gif" alt="P16 osc"
+ width=101 height=101 usemap="#p16-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=99><a href="p16achim.rle">
+	    Achim's period-16 [36]</a></td>
+    </tr>
+</table><br>
+
+<map name="p16-lg">
+	<area shape=rect coords="0,0,101,79" href="p16achim.rle">
+	<area shape=rect coords="0,80,79,101" href="p16achim.rle">
+	<area shape=rect coords="80,80,101,101" href="p16-lg.rle">
+</map>
+
+<hr>
+<a name="p18"></a>
+<h2>Period 18 oscillators:</h2>
+<a href="p18-lg.rle"><img src="p18-lg.gif" alt="P18 osc"
+ width=121 height=101 usemap="#p18-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=119><a href="p18uubbk.rle">
+	    Two unices hassling block on block [14]</a></td>
+    </tr>
+</table><br>
+
+<map name="p18-lg">
+	<area shape=rect coords="0,0,121,79" href="p18uubbk.rle">
+	<area shape=rect coords="0,80,99,101" href="p18uubbk.rle">
+	<area shape=rect coords="100,80,121,101" href="p18-lg.rle">
+</map>
+
+<hr>
+<a name="p30"></a>
+<h2>Period-30 oscillators and pseudo-oscillators.</h2>
+Due to the the large number of oscillators, these are shown on a
+<a href="p30osc.htm">separate page</a>.<br>
+
+<hr>
+<a name="p36"></a>
+<h2>Period 36 oscillators:</h2>
+<a href="p36-lg.rle"><img src="p36-lg.gif" alt="P36 oscillators"
+ width=121 height=101 usemap="#p36-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=119><a href="p36et2t2.rle">
+	    Two eaters hassling two T tetrominos [9]</a></td>
+    </tr>
+</table><br>
+
+<map name="p36-lg">
+	<area shape=rect coords="0,0,121,79" href="p36et2t2.rle">
+	<area shape=rect coords="0,80,99,101" href="p36et2t2.rle">
+	<area shape=rect coords="100,80,121,101" href="p36-lg.rle">
+</map>
+
+<hr>
+<a name="p44"></a>
+<h2>Period 44 oscillators:</h2>
+<a href="p44-lg.rle"><img src="p44-lg.gif" alt="period-44 oscillators"
+ width=221 height=161 usemap="#p44-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=219><a href="p44hs2b4.rle">Two pi heptominos
+	    hassled by two HWSS emulators and four blocks [68]</a></td>
+    </tr>
+</table><br>
+
+<map name="p44-lg">
+	<area shape=rect coords="0,0,221,139" href="p44hs2b4.rle">
+	<area shape=rect coords="0,140,199,161" href="p44hs2b4.rle">
+	<area shape=rect coords="200,140,221,161" href="p44-lg.rle">
+</map>
+
+<hr>
+<a name="p45"></a>
+<h2>Period 45 oscillators:</h2>
+<a href="p45-lg.rle"><img src="p45-lg.gif" alt="period-45 oscillators"
+ width=181 height=181 usemap="#p45-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=179><a href="p45pc4gl.rle">
+	    Four pentadecathlons shuttling a glider [14]</a></td>
+    </tr>
+</table><br>
+
+<map name="p45-lg">
+	<area shape=rect coords="0,0,181,159" href="p45pc4gl.rle">
+	<area shape=rect coords="0,160,159,181" href="p45pc4gl.rle">
+	<area shape=rect coords="160,160,181,181" href="p45-lg.rle">
+</map>
+
+<hr>
+<a name="p46"></a>
+<h2>Period 46 oscillators:</h2>
+<a href="p46-lg.rle"><img src="p46-lg.gif" alt="P46 oscillators"
+ width=161 height=81 usemap="#p46-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=159><a href="p46tw.rle">
+	    Twin Bees [8]</a></td>
+    </tr>
+</table><br>
+
+<map name="p46-lg">
+	<area shape=rect coords="0,0,161,59" href="p46tw.rle">
+	<area shape=rect coords="0,60,139,81" href="p46tw.rle">
+	<area shape=rect coords="140,60,161,81" href="p46-lg.rle">
+</map>
+
+<hr>
+<a name="p50"></a>
+<h2>Period 50 oscillators:</h2>
+<a href="p50-lg.rle"><img src="p50-lg.gif" alt="period-50 oscillators"
+ width=221 height=101 usemap="#p50-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=219><a href="p50tj.rle">
+	    P50 Traffic-jam [42]</a></td>
+    </tr>
+</table><br>
+
+<map name="p50-lg">
+	<area shape=rect coords="0,0,221,79" href="p50tj.rle">
+	<area shape=rect coords="0,80,199,101" href="p50tj.rle">
+	<area shape=rect coords="200,80,221,101" href="p50-lg.rle">
+</map>
+
+<hr>
+<a name="p54"></a>
+<h2>Period 54 oscillators:</h2>
+<a href="p54-lg.rle"><img src="p54-lg.gif" alt="period-54 oscillators"
+ width=441 height=101 usemap="#p54-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=157><a href="p54et4tw.rle">
+	    Four eaters hassling Twin Bees [12]</a></td>
+	<td valign=top width=279><a href="p54tw2pc.rle">
+	    Two twin bees, each hassled by four eaters,
+	    hassling pentadecathlon [35]</a></td>
+    </tr>
+</table><br>
+
+<map name="p54-lg">
+	<area shape=rect coords="0,0,159,101" href="p54et4tw.rle">
+	<area shape=rect coords="160,0,441,79" href="p54tw2pc.rle">
+	<area shape=rect coords="160,80,419,101" href="p54tw2pc.rle">
+	<area shape=rect coords="420,80,441,101" href="p54-lg.rle">
+</map>
+
+<hr>
+<a name="p56"></a>
+<h2>Period 56 oscillators:</h2>
+<a href="p56-lg.rle"><img src="p56-lg.gif" alt="P56 oscillators"
+ width=141 height=121 usemap="#p56-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=219><a href="p56br2bh.rle">
+	    Two blockers hassling B-heptomino [19]</a></td>
+    </tr>
+</table><br>
+
+<map name="p56-lg">
+	<area shape=rect coords="0,0,141,99" href="p56br2bh.rle">
+	<area shape=rect coords="0,100,119,121" href="p56br2bh.rle">
+	<area shape=rect coords="120,100,141,121" href="p56-lg.rle">
+</map>
+
+<hr>
+<a name="p60"></a>
+<h2>Period 60 oscillators:</h2>
+(The toad-flipper and toad-sucker mechanisms can also be used between pairs
+of many oscillators which produce domino-sparks.)<br><br>
+<a href="p60-lg.rle"><img src="p60-lg.gif" alt="period-60 oscillators"
+ width=581 height=121 usemap="#p60-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=77><a href="p60tdpc1.rle">
+	    Toad flipper #1 [10]</a></td>
+	<td valign=top width=77><a href="p60tdpc2.rle">
+	    Toad flipper #2 [10]</a></td>
+	<td valign=top width=77><a href="p60tdpc3.rle">
+	    Toad sucker #1 [10]</a></td>
+	<td valign=top width=77><a href="p60tdpc4.rle">
+	    Toad sucker #2 [10]</a></td>
+	<td valign=top width=77><a href="p60tdpc5.rle">
+	    Toad sucker #3 [10]</a></td>
+	<td valign=top width=179><a href="p60pc2gl.rle">
+	    Two pentadecathlons shuttling glider [7]</a></td>
+    </tr>
+</table><br>
+
+<map name="p60-lg">
+	<area shape=rect coords="0,0,79,121" href="p60tdpc1.rle">
+	<area shape=rect coords="80,0,159,121" href="p60tdpc2.rle">
+	<area shape=rect coords="160,0,239,121" href="p60tdpc3.rle">
+	<area shape=rect coords="240,0,319,121" href="p60tdpc4.rle">
+	<area shape=rect coords="320,0,399,121" href="p60tdpc5.rle">
+	<area shape=rect coords="400,0,581,99" href="p60pc2gl.rle">
+	<area shape=rect coords="400,100,559,121" href="p60pc2gl.rle">
+	<area shape=rect coords="560,100,581,121" href="p60-lg.rle">
+</map>
+
+<hr>
+<a name="p72"></a>
+<h2>Period 72 oscillators:</h2>
+<a href="p72-lg.rle"><img src="p72-lg.gif" alt="P72 oscillators"
+ width=161 height=101 usemap="#p72-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=159><a href="p72br2rp.rle">
+	    Two blockers hassling R pentomino [19]</a></td>
+    </tr>
+</table><br>
+
+<map name="p72-lg">
+	<area shape=rect coords="0,0,161,79" href="p72br2rp.rle">
+	<area shape=rect coords="0,80,139,101" href="p72br2rp.rle">
+	<area shape=rect coords="140,80,161,101" href="p72-lg.rle">
+</map>
+
+<hr>
+<a name="p75"></a>
+<h2>Period 75 oscillators:</h2>
+<a href="p75-lg.rle"><img src="p75-lg.gif" alt="period-75 oscillators"
+ width=201 height=121 usemap="#p75-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=199><a href="p75pc3gl.rle">
+	    Three pentadecathlons shuttling a glider [10]</a></td>
+    </tr>
+</table><br>
+
+<map name="p75-lg">
+	<area shape=rect coords="0,0,201,99" href="p75pc3gl.rle">
+	<area shape=rect coords="0,100,179,121" href="p75pc3gl.rle">
+	<area shape=rect coords="180,100,201,121" href="p75-lg.rle">
+</map>
+
+<hr>
+<a name="p88"></a>
+<h2>Period 88 oscillators:</h2>
+<a href="p88-lg.rle"><img src="p88-lg.gif" alt="P88 oscillators"
+ width=141 height=141 usemap="#p88-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=139><a href="p88et6ph.rle">
+	    Pi-heptomino hassled by six eaters [16]</a></td>
+    </tr>
+</table><br>
+
+<map name="p88-lg">
+	<area shape=rect coords="0,0,141,119" href="p88et6ph.rle">
+	<area shape=rect coords="0,120,119,141" href="p88et6ph.rle">
+	<area shape=rect coords="120,120,141,141" href="p88-lg.rle">
+</map>
+
+<hr>
+<a name="p100"></a>
+<h2>Period 100 oscillators:</h2>
+<a href="p100-lg.rle"><img src="p100-lg.gif" alt="period-100 oscillators"
+ width=241 height=101 usemap="#p100-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=239><a href="p100cent.rle">
+	    Centinal [16]</a></td>
+    </tr>
+</table><br>
+
+<map name="p100-lg">
+	<area shape=rect coords="0,0,241,79" href="p100cent.rle">
+	<area shape=rect coords="0,80,219,101" href="p100cent.rle">
+	<area shape=rect coords="220,80,241,101" href="p100-lg.rle">
+</map>
+
+<hr>
+<a name="p144"></a>
+<h2>Period 144 oscillators:</h2>
+<a href="p144-lg.rle"><img src="p144-lg.gif" alt="P144 oscillators"
+ width=161 height=121 usemap="#p144-lg"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=159><a href="p144achm.rle">
+	    Achim's period-144 [15]</a></td>
+    </tr>
+</table><br>
+
+<map name="p144-lg">
+	<area shape=rect coords="0,0,161,99" href="p144achm.rle">
+	<area shape=rect coords="0,100,139,121" href="p144achm.rle">
+	<area shape=rect coords="140,100,161,121" href="p144-lg.rle">
+</map>
+
+<hr>
+<b>Other types:</b>
+	<a href="still.htm">still-lifes</a>,
+	<a href="pstill.htm">pseudo-still-lifes</a>,
+	oscillators and pseudo-oscillators,
+	<a href="sship.htm">spaceships</a>,
+	<a href="constell.htm">constellations</a>,
+	<a href="metheus.htm">metheuselahs</a>.<br><br>
+
+<b>See also:  </b>Life objects sorted by:
+	<a href="objcount.htm">counts</a>,
+	<a href="objcost.htm">gliders</a>,
+	<a href="objname.htm">name</a>,
+	<a href="objsize.htm">size</a>,
+	or <a href="objtype.htm">type</a>.<br><br>
+
+<a href="index.htm">
+<img src="homepage.gif" alt="home" align=middle width=32 height=32>
+Back to Home Page</a>
+<a href="lifepage.htm">
+<img src="lifepage.gif" alt="life" align=middle width=32 height=32>
+Back to Life Page</a><br><br>
+
+</body></html>
+
+<!-- Localized -->

@@ -1,0 +1,24 @@
+x = 148, y = 109
+122bo$123bo3bobo$121b3o3b2o$128bo3$122b2o$123b2o$122bo20b2x$144bx$143b
+x$134b3o6b2x$130bo3bo9bx$120bo10b2o2bo8bxbx$120b2o8b2o13bxbx$119bobo3b
+2o19bx$126b2o$125bo4$47bo$45b2o$46b2o$42bo$40bobo47bo$41b2o47bobo$90b
+2o$63b2x18b2o18b2x18b2o18b2x$47b2o15bx3b2y14bo3b2o14bx19bo19bx$46b2o
+15bx4b2y13bo4b2o13bx19bo19bx$44bo3bo14b2x18b2o18b2x18b2o18b2x$42bobo
+19bx19bo19bx19bo19bx$43b2o19bxbx17bobo17bxbx17bobo6bo10bxbx$65b2x18b2o
+18b2x18b2o6bobo9bxbx$42b2o89b2o11bx$41bobo86b2o$43bo85b2o$131bo$125b2o
+$124bobo$126bo3$5bo$3bobo$2o2b2o$b2o126bobo$o22b2x18b2o18b2x18b2o18b2x
+18b2o5b2o11b2x$4bobo17bx19bo19bx19bo7bo11bx19bo5bo13bx$4b2o17bx19bo19b
+x19bo7bo11bx19bo9b2o8bx$5bo17b2x18b2o18b2x18b2o6b3o9b2x3bx14b2o3bo4bob
+o7b2x$8bo39bo58bxbx7bo9bobo3bo10bx$7b2o38bo40b3o16bxbx5bobo9bobo14bxbx
+$7bobo37b3o14bx19bo3bo15bx3bx7b2o6bo3bo16b2x$63bxbx17bobo3bo13bxbx13bo
+3bobo$44b3o16bxbx17bobo17bxbx13b2o2bobo$44bo19bx19bo19bx13bobo3bo4b3o$
+45bo83bo$125bo4bo$125b2o$124bobo4$126bo$126bobo$126b2o$132bobo$44bo78b
+o8b2o$43bo74bo2bobo9bo$43b3o70bobo3b2o$41bo75b2o11bo$42bo42bo43bo$40b
+3o41bo44b3o$45bo38b3o$44bo37bo$44b3o36bo$bobo59b2x16b3o19b2x10b3o5b2o
+18b2x$2b2o34bo25bx38b2x12bo5b2o19bx$2bo4bo31b2o22bx52bo26bx$6bo16b2x
+13b2o3b2o18b2x18b2o18b2x18b2o8bo9b2x$6b3o15bx19bo19bx19bo19bx19bo7b2o
+10bx$24bxbx17bobo17bxbx17bobo17bxbx17bobo5bobo9bxbx$25bxbx11b3o3bobo
+17bxbx17bobo17bxbx17bobo17bxbx$26bx12bo6bo19bx19bo19bx19bo19bx$36bo3bo
+$2b2o32b2o$3b2o2bo27bobo$2bo3bo77bo$6b3o74bo$83b3o$81bo$82bo$80b3o$85b
+o$84bo$84b3o$103b2x$78bo25bx$79b2o22bx$78b2o3b2o18b2x$84bo19bx$84bobo
+17bxbx$79b3o3bobo17bxbx$79bo6bo19bx$76bo3bo$76b2o$75bobo!

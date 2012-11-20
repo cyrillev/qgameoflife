@@ -1,0 +1,332 @@
+<html><head><title>Life Credits</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+</head><body>
+
+<h1><center>Life Credits</center></h1>
+
+<center>
+	<a href="#buckingham">Buckingham</a> |
+	<a href="#callahan">Callahan</a> |
+	<a href="#coe">Coe</a> |
+	<a href="#conway">Conway</a> |
+	<a href="#elkies">Elkies</a> |
+	<a href="#flammenkamp">Flammenkamp</a> |
+	<a href="#gosper">Gosper</a> |
+	<a href="#hickerson">Hickerson</a> |
+	<a href="#koenig">Koenig</a> |
+	<a href="#niemiec">Niemiec</a> |
+	<a href="#petrie">Petrie</a> |
+	<a href="#raynham">Raynham</a> |
+	<a href="#wainwright">Wainwright</a> |
+	<a href="#misc">Miscellaneous</a>
+</center><br><br>
+
+(NOTE:  This list includes only individuals whose work is directly or
+indirectly included in these pages.  There are many others not included here
+who have also made substantial contributions to Life.)
+
+<hr>
+<a name="buckingham"></a>
+<h2>David Buckingham</h2>
+David Buckingham significantly expanded the lists of known
+<a href="lifeterm.htm#still">still-lifes</a>,
+first listing the 12-bits (simultaneously with <a href="#petrie">Petrie</a> and
+Boyer), first listing the 13-bits, and using <a href="#raynham">Raynham's</a>
+search program to first list the 14-bits.<br><br>
+
+He found many <a href="lifeterm.htm#oscillator">oscillators</a>,
+including literally hundreds of billiard-table configurations, as well as
+a basic <a href="lifeterm.htm#puffer">puffer train</a>.<br><br>
+
+He developed most of the existing technology used in glider synthesis of
+still-lifes, oscillators, and <a href="lifeterm.htm#spaceship">spaceships</a>,
+and methodically generated syntheses of all still-lifes and oscillators up
+to 14 bits, as well as many larger ones.<br><br>
+
+In 1996, he revealed a suite of track components which use eaters and other
+still-lifes to move can move a Herschel heptomino (the 20th generation of
+<a href="6bh.rle">B-heptomino</a>, after it has left behind a block).
+By combining several of these, in much the same way as one assembles toy
+train tracks, one can produce circular conduits which take arbitrarily long
+to cycle a single Herschel.  By placing multiple Herschels in such a conduit,
+one can obtain oscillators of arbitrarily small periods.  (These were
+improvements over his earlier track components which used spark-producing
+oscillators as stabilizers;  unfortunately, those can only produce oscillators
+whose periods are multiples of those of the spark-producers.)<br><br>
+
+Oscillators of all periods 58 and above can be obtained in this way.
+Since Herschels naturally release gliders, this also yields glider guns of
+all periods 62 and above.  (The Herschels collide with each other if closer
+than 58 generations apart, and they collide with the escaping gliders if
+closer than 62 generations apart.)
+Recently, Dietrich Leithner has constructed oscillators of periods 57 and 56
+by adding in one of Buckingham's earlier spark-stabilized sections.<br><br>
+
+This is basically a variation of the method described by
+<a href="lifecred.htm#conway">Conway</a> in the 1970's to construct
+oscillators of arbitary period using stable glider-reflectors.
+(Currently, all known stable glider-reflectors are derived from the above,
+turning a glider into a Herschel, shuttling the Herschel, and then turning
+the Herschel back into a glider.)<br><br>
+
+<hr>
+<a name="callahan"></a>
+<h2>Paul Callahan</h2>
+Paul Callahan has expanded <a href="#buckingham">Buckingham's</a>
+Herschel conduit mechanisms, building stable glider reflectors.<br><br>
+
+He has also maintains a
+<a href="http://www.cs.jhu.edu/~callahan/lifepage.html">web page</a>
+which includes a compreshensive
+<a href="http://www.cs.jhu.edu/~callahan/patterns/contents.html">
+Life pattern catalog</a>, and a
+<a href="http://www.cs.jhu.edu/~callahan/patterns/javalife.html">
+Java Life applet</a>.<br><br>
+
+<hr>
+<a name="coe"></a>
+<h2>Tim Coe</h2>
+Tim Coe found the <a href="28coelw.rle">period-16 puffer engine</a>,
+which is itself a clean <a href="lifeterm.htm#spaceship">spaceship</a>,
+but which has easily ignitable exhaust, facilitating construction of many
+<a href="lifeterm.htm#puffer">puffer trains</a>.<br><br>
+
+He has also recently discovered a new small
+<a href="17coep8.rle">P8 oscillator</a>, and a collision of 11 gliders which
+which eventually produces a natural <a href="12ca.rle">Caterer</a>.<br><br>
+
+<hr>
+<a name="conway"></a>
+<h2>John Horton Conway</h2>
+In the early 70's, John Horton Conway invented the
+<a href="lifeterm.htm#life">Game of Life</a>.
+He did much of the original research into Life, laying most of the game's
+basic mathematical foundations.<br><br>
+
+He found many of the small
+<a href="lifeterm.htm#still">still-lifes</a>,
+<a href="lifeterm.htm#oscillator">oscillators</a>
+(including the <a href="p3pu.rle">Pulsar</a> and
+<a href="12pc.rle">Pentadecathlon</a>), and
+<a href="lifeterm.htm#spaceship">spaceships</a>
+(<a href="5gl.rle">Glider</a>,
+<a href="9lw.rle">Light-weight spaceship (LWSS)</a>,
+<a href="11mw.rle">Middle-weight spaceship (MWSS)</a>, and
+<a href="13hw.rle">Heavy-weight spaceship (HWSS)</a>.)<br><br>
+
+<hr>
+<a name="elkies"></a>
+<h2>Noam Elkies</h2>
+Noam Elkies has found several oscillators, including the period-36
+<a href="p36et2t2.rle">Two eaters hassling two T-tetrominos</a>,
+a new <a href="20elkies.rle">period-5 oscillator</a>,
+and the infinitely-expandable Traffic-Jam oscillators.<br><br>
+
+He has also proven that the density of Life still-lifes
+cannot exceed 50%.<br><br>
+
+<hr>
+<a name="flammenkamp"></a>
+<h2>Achim Flammenkamp</h2>
+Achim Flammenkamp performed many experiments on random Life fields,
+collecting statistics on object artificiality.  In the process,
+he found many never-before-seen naturally-occuring (though extremely rare)
+<a href="lifeterm.htm#oscillator">oscillators</a>,
+such as the <a href="p4achim.rle">Dual 1-2-3-4</a>,
+the P5 <a href="15ap.rle">Pseudo barber-pole</a>,
+the P8 <a href="17sm.rle">Smiley</a>, a <a href="p16achim.rle">P16</a>,
+and a <a href="p144achm.rle">P144</a>.<br><br>
+
+His results are available on his
+<a href="http://www.uni-bielefeld.de/~achim/gol.html">web page</a>.<br><br>
+
+<hr>
+<a name="gosper"></a>
+<h2>R. William Gosper</h2>
+Bill Gosper found some of Life's basic shuttle-based oscillators,
+including <a href="20qb1.rle">Queen Bee</a>,
+<a href="p46tw.rle">Twin Bees</a>, and
+<a href="p100cent.rle">Centinal</a>.
+He first proved that Life patterns could expand forever by constructing
+the first <a href="lifeterm.htm#gun">glider gun</a>, and subsequently
+<a href="lifeterm.htm#puffer">puffer trains</a>.
+He subsequently also proved that Life patterns could expand quadratically
+by constructing the first <a href="lifeterm.htm#breeder">breeder</a>, by
+having a flotilla of puffers which construct glider guns.<br><br>
+
+<hr>
+<a name="hickerson"></a>
+<h2>Dean Hickerson</h2>
+Dean Hickerson wrote the first oscillator search program, which
+found many new <a href="lifeterm.htm#oscillator">oscillators</a>,
+including some small ones like the <a href="12ca.rle">Caterer</a>,
+<a href="12md.rle">Mold</a>, and <a href="13jm.rle">Jam</a>.
+This program also found the first spaceships other than the
+natural ones found by <a href="#conway">Conway</a>.
+He has recently written another search program which has found many
+new billiard-table oscillators, including the first period 17.<br><br>
+
+He also found glider syntheses of several large objects which
+occur naturally in contrived situations, as well as the first
+four-glider synthesis of the <a href="8tt.rle">Tub w/tail</a>.<br><br>
+
+<hr>
+<a name="koenig"></a>
+<h2>H. Koenig</h2>
+H. Koenig has performed many computer object searches, verifying
+<a href="#buckingham">Buckingham's</a> and
+<a href="#niemiec">Niemiec's</a>
+<a href="lifeterm.htm#still">still-life</a> counts up to 18 bits,
+and period 2 <a href="lifeterm.htm#oscillator">oscillators</a> up to 16 bits,
+(as well as making several minor corrections to some of these lists.)<br><br>
+
+He has also collected statistics on many randomly-occuring Life objects and
+oscillators, the results of which have resulted in improved glider syntheses
+of some of these.<br><br>
+
+He has recently found a previously-unknown three-glider synthesis of the
+<a href="12pc.rle">Pentadecathlon</a>.<br><br>
+
+He maintains a
+<a href="http://www.halcyon.com/hkoenig/LifeInfo/LifeInfo.html">web page</a>
+which includes lists of objects and many glider syntheses,
+an alternative to the information contained here.<br><br>
+
+<hr>
+<a name="niemiec"></a>
+<h2>Mark D. Niemiec</h2>
+Mark D. Niemiec has found several oscillators, including the
+period-9 <a href="p9sr1.rle">Snacker</a>.<br><br>
+
+He expanded on <a href="#buckingham">Buckingham's</a> enumeration results,
+generating complete lists of <a href="lifeterm.htm#still">still-lifes</a>
+and <a href="lifeterm.htm#pseudo-still">pseudo-still-lifes</a>
+up to 24 bits, as well as period-2
+<a href="lifeterm.htm#oscillator">oscillators</a> and
+<a href="lifeterm.htm#pseudo-oscillator">pseudo-oscillators</a>
+up to 19 bits.
+He has also listed larger-period oscillators and pseudo-oscillators up to
+20 bits by hand, although these still await computer verification.<br><br>
+
+He has expanded on <a href="#buckingham">Buckingham's</a> glider synthesis
+results, generating syntheses of many 15-bit still-lifes, all
+pseudo-still-lifes up to 15 bits, many remaining period 2 oscillators of
+15-18 bits, most period 2 pseudo-oscillators up to 19 bits,
+and most higher-period oscillators and pseudo-oscillators up to 20 bits.
+
+Niemiec is also the author and maintainer of these Life pages, which show
+many of the above object lists and syntheses.<br><br>
+
+<hr>
+<a name="petrie"></a>
+<h2>Douglas G. Petrie</h2>
+Douglas G. Petrie found many early glider syntheses, including the
+<a href="6td.rle">Toad</a>, <a href="12-3.rle">Half-fleet (12.3)</a>,
+<a href="p3pu.rle">Pulsar</a>, <a href="12pc.rle">Pentadecathlon</a>,
+<a href="13hw.rle">HWSS</a>, <a href="39lwsslw.rle">Schick ship</a>, and
+<a href="12swbk.rle">Switch engine</a>.<br><br>
+
+He and V. Everett Boyer also first listed the 12-bit
+<a href="lifeterm.htm#still">still-lifes</a>,
+(simultaneously with <a href="#buckingham">Buckingham</a>).<br><br>
+
+<hr>
+<a name="raynham"></a>
+<h2>Peter R. Raynham</h2>
+Peter R. Raynham has found several small oscillators.<br><br>
+
+He also found several glider syntheses, including a 14-bit still-life
+<a href="14-507.rle">Sidewalk (14.507)</a>, and the previous optimal
+(for twenty years) four-glider synthesis of the
+<a href="12pc.rle">Pentadecathlon</a>.<br><br>
+
+He wrote the first program to search for
+<a href="lifeterm.htm#still">still-lifes</a>,
+verifying the lists created by <a href="#wainwright">Wainwright</a> and
+<a href="#buckingham">Buckingham</a>, and which Buckingham used to expand
+the state of the art to include the 14-bit still-lifes.<br><br>
+
+<hr>
+<a name="wainwright"></a>
+<h2>Robert T. Wainwright</h2>
+In the early 70's, Robert T. Wainwright published
+<a href="http://home.earthlink.net/~hilery/life/">Lifeline</a>,
+a newsletter devoted to discoveries about <a href="lifeterm.htm#life">Life</a>,
+and sometimes other similar cellular automata.  Many of the original
+discoveries in Life were first published in Lifeline, and Lifeline served to
+foster much interest in Life, which was then still in its infancy.<br><br>
+
+Wainwright began the first efforts to systematically list the
+<a href="lifeterm.htm#still">still-lifes</a>, assembling lists up to 11
+bits from various partial lists submitted by various Lifeline readers.<br><br>
+
+He also found many <a href="lifeterm.htm#oscillator">oscillators</a>,
+including <a href="15br.rle">blocker</a>, and a basic
+<a href="lifeterm.htm#puffer">puffer train</a>.<br><br>
+
+<hr>
+<a name="misc"></a>
+<h2>Miscellaneous</h2>
+<b>John Abbott</b> found the first glider synthesis of a
+<a href="7lb.rle">long boat</a>.<br><br>
+
+<b>George D. Collins, Jr.</b> discovered the period-14 oscillator
+<a href="16tu.rle">tumbler</a>.<br><br>
+
+<b>Charles Corderman</b> discovered the 9-bit still-life
+<a href="9-10.rle">hat</a> and three variants of the switch engine
+(<a href="12swbk.rle">block-making</a>, <a href="12swgl.rle">glider-making</a>,
+and <a href="16na.rle">Noah's ark</a>)
+the only known naturally-occurring puffer train.<br><br>
+
+<b>Sol Goodman</b> and <b>Arthur C. Taber</b> discovered the period-5
+oscillator <a href="16oc.rle">octagon-II</a>.<br><br>
+
+<b>Alan Hensel</b> maintains a
+<a href="http://www.mindspring.com/~alanh/life/">web page</a>
+which includes a comprehensive glossary of Life patterns and terms.<br><br>
+
+<b>Jan Kok</b> discovered the period-8 oscillator
+<a href="p8galaxy.rle">Kok's Galaxy</a>.<br><br>
+
+<b>Clement A. Lessner III</b> and <b>William P. Webb</b> discovered the
+7-bit still life <a href="7et.rle">eater</a>.<br><br>
+
+<b>D. R. McEntee</b> found the synthesis of the 14-bit still-life
+<a href="14-582.rle">Bookend tie bookend (14.582)</a>.<br><br>
+<b>Richard Schroeppel</b> discovered the period-3 oscillator
+<a href="18cutbk2.rle">Cuphook</a>.<br><br>
+
+<b>Paul Schick</b> discovered a clean puffer-train tag-along, the
+<a href="39lwsslw.rle">Schick ship</a>.<br><br>
+
+<b>Stephen Silver</b> reduced by one glider
+<a href="#buckingham">Buckingham's</a>
+5-glider mechanism for adding a table, reducing the cost of
+several still-lifes which include tables, such as
+<a href="14-446.rle">14.446</a> and <a href="14-448.rle">14.448</a>.<br><br>
+
+In 1986, <b>Andrew Trevorrow</b> discovered <a href="9ra.rle">Rabbits</a>,
+one of the most prolific
+<a href="lifeterm.htm#metheuselah">metheuselahs</a>.<br><br>
+
+<b>Don Woods</b> discovered a period-8 billiard table
+<a href="p8cauld.rle">Cauldron</a>.<br><br>
+
+<hr>
+<b>See also:  </b>
+	<a href="lifeterm.htm">definitions</a>,
+	<a href="lifestr.htm">structure</a>,
+	credits.<br><br>
+
+<a href="index.htm">
+<img src="homepage.gif" alt="home" align=middle width=32 height=32>
+Back to Home Page</a>
+<a href="lifepage.htm">
+<img src="lifepage.gif" alt="life" align=middle width=32 height=32>
+Back to Life Page</a><br><br>
+
+</body></html>
+
+<!-- Localized -->

@@ -1,0 +1,13 @@
+x = 149, y = 59
+128bo$128bobo$128b2o2$125bo$124b2o$124bobo$87bo$47bobo36bo35b2o$47b2o
+37b3o32bobo$48bo35bo38bo21b2x$44bo40bo47b3o9bx$45bo37b3o19b2x18b2o6bo
+12bx$43b3o59b2x18b2o7bo10b2x2$65b2x18b2o18b2x18b2o18b2x$66bx19bo19bx
+19bo19bx$65bx19bo19bx19bo19bx$43b2o20bxbx17bobo17bxbx17bobo17bxbx$44b
+2o20bxbx17bobo17bxbx17bobo17bxbx$43bo3b3o17bx19bo19bx19bo19bx$47bo$48b
+o$42b3o$44bo$43bo11$4bo$4bobo$4b2o2b2o$7b2o$9bo15b2x18b2o18b2x18b2o18b
+2x18b2o18b2x$3bobo19bx19bo19bx19bo19bx19bo19bx$4b2o20bx19bo19bx19bo19b
+x19bo19bx$4bo20b2x18b2o18b2x18b2o18b2x18b2o18b2x$bo$b2o62b2x18b2o7bo
+10b2x18b2o18b2x$obo40b3o19b2x18b2o6bo12bx19bo19bx$45bo47b3o9bx19bo19bx
+$44bo38bo21b2x18b2o18bxbx$46b3o32bobo36bo13bo11bxbx$46bo35b2o37b2o6b2o
+2bo13bx$47bo72b2o6b2o3b3o$84bobo43bo6b3o$84b2o36bo14bo$85bo36b2o8b2o4b
+o$121bobo4b2o2bobo$88b2o39b2obo$88bobo37bo$88bo!

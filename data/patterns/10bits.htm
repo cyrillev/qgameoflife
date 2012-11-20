@@ -1,0 +1,268 @@
+<html><head><title>Ten-bit Life Objects</title>
+<meta name="description"
+content="Conway's Game of Life:  10-bit object lists and glider syntheses">
+<meta name="keywords"
+content="conway game life 10 bit object list glider synthesis">
+</head><body>
+
+<h1><center>Ten-bit Life Objects</center></h1>
+
+<center>
+	<a href="#10-bit still">Still-lifes</a> |
+	<a href="#10-bit pseudo-still">Pseudo-still-lifes</a> |
+	<a href="#10-bit p2">P2 oscillator</a> |
+	<a href="#10-bit pseudo-p2">P2 pseudo-oscillator</a> |
+	<a href="#10-bit constellation">Constellation</a> |
+	<a href="#10-bit metheuselah">Metheuselah</a>
+</center><br>
+
+<hr>
+<a name="10-bit still"></a>
+<h2>The 25 ten-bit <a href="still.htm">still-lifes</a>:</h2>
+<a href="p1-10.rle"><img src="p1-10.gif" alt="10-bit still-lifes"
+ width=601 height=141 usemap="#p1-10"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=57><a href="10-1.rle">
+	    Very long barge (10.1) [5]</a></td>
+	<td valign=top width=57><a href="10-2.rle">
+	    Very long ship (10.2) [5]</a></td>
+	<td valign=top width=57><a href="10-3.rle">
+	    Loaf siamese barge (10.3) [9]</a></td>
+	<td valign=top width=57><a href="10-4.rle">
+	    Curl, Long hat (10.4) [5]</a></td>
+	<td valign=top width=57><a href="10-5.rle">
+	    Up barge w/tail (10.5) [5]</a></td>
+	<td valign=top width=57><a href="10-6.rle">
+	    Down barge w/tail (10.6) [5]</a></td>
+	<td valign=top width=57><a href="10-7.rle">
+	    Beehive w/tail (10.7) [4]</a></td>
+	<td valign=top width=57><a href="10-8.rle">
+	    Snake siamese snake (10.8) [6]</a></td>
+	<td valign=top width=57><a href="10-9.rle">
+	    Carrier siamese snake (10.9) [6]</a></td>
+	<td valign=top width=59><a href="10-10.rle">
+	    Carrier siamese carrier (10.10) [6]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=57><a href="10-11.rle">
+	    Very long canoe (10.11) [4]</a></td>
+	<td valign=top width=57><a href="10-12.rle">
+	    Extra extra long snake (10.12) [6]</a></td>
+	<td valign=top width=57><a href="10-13.rle">
+	    Integral w/hook (10.13) [5]</a></td>
+	<td valign=top width=57><a href="10-14.rle">
+	    Fuse w/two tails (10.14) [6]</a></td>
+	<td valign=top width=57><a href="10-15.rle">
+	    Very long hook w/tail (10.15) [7]</a></td>
+	<td valign=top width=57><a href="10-16.rle">
+	    Cis hook w/tail (10.16) [8]</a></td>
+	<td valign=top width=57><a href="10-17.rle">
+	    Integral w/tub (10.17) [5]</a></td>
+	<td valign=top width=57><a href="10-18.rle">
+	    Claw w/tail (10.18) [4]</a></td>
+	<td valign=top width=57><a href="10-19.rle">
+	    Long integral (10.19) [5]</a></td>
+	<td valign=top width=59><a href="10-20.rle">
+	    Cis shillelagh (10.20) [5]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=57><a href="10-21.rle">
+	    Very long shillelagh (10.21) [6]</a></td>
+	<td valign=top width=57><a href="10-22.rle">
+	    Tub w/very long tail (10.22) [7]</a></td>
+	<td valign=top width=57><a href="10-23.rle">
+	    Boat w/long tail (10.23) [5]</a></td>
+	<td valign=top width=57><a href="10-24.rle">
+	    Boat tie boat (10.24) [4]</a></td>
+	<td valign=top width=57><a href="10-25.rle">
+	    Block on table (10.25) [4]</a></td>
+    </tr>
+</table><br>
+
+<map name="p1-10">
+	<area shape=rect coords="0,0,59,49" href="10-1.rle">
+	<area shape=rect coords="60,0,119,49" href="10-2.rle">
+	<area shape=rect coords="120,0,179,49" href="10-3.rle">
+	<area shape=rect coords="180,0,239,49" href="10-4.rle">
+	<area shape=rect coords="240,0,299,49" href="10-5.rle">
+	<area shape=rect coords="300,0,359,49" href="10-6.rle">
+	<area shape=rect coords="360,0,419,49" href="10-7.rle">
+	<area shape=rect coords="420,0,479,49" href="10-8.rle">
+	<area shape=rect coords="480,0,539,49" href="10-9.rle">
+	<area shape=rect coords="540,0,601,49" href="10-10.rle">
+
+	<area shape=rect coords="0,50,59,89" href="10-11.rle">
+	<area shape=rect coords="60,50,119,89" href="10-12.rle">
+	<area shape=rect coords="120,50,179,89" href="10-13.rle">
+	<area shape=rect coords="180,50,239,89" href="10-14.rle">
+	<area shape=rect coords="240,50,299,89" href="10-15.rle">
+	<area shape=rect coords="300,50,359,89" href="10-16.rle">
+	<area shape=rect coords="360,50,419,89" href="10-17.rle">
+	<area shape=rect coords="420,50,479,89" href="10-18.rle">
+	<area shape=rect coords="480,50,539,89" href="10-19.rle">
+	<area shape=rect coords="540,50,601,89" href="10-20.rle">
+
+	<area shape=rect coords="0,90,59,141" href="10-21.rle">
+	<area shape=rect coords="60,90,119,141" href="10-22.rle">
+	<area shape=rect coords="120,90,179,141" href="10-23.rle">
+	<area shape=rect coords="180,90,239,141" href="10-24.rle">
+	<area shape=rect coords="240,90,299,141" href="10-25.rle">
+	<area shape=rect coords="300,90,601,119" nohref>
+	<area shape=rect coords="300,120,579,141" nohref>
+	<area shape=rect coords="580,120,601,141" href="p1-10.rle">
+</map>
+
+<hr>
+<a name="10-bit pseudo-still"></a>
+<h2>The 7 ten-bit <a href="pstill.htm">pseudo-still-lifes</a>:</h2>
+<a href="pp1-10.rle"><img src="pp1-10.gif" alt="10-bit pseudo-still-lifes"
+ width=421 height=61 usemap="#pp1-10"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=57><a href="10snbk.rle">
+	    Block on snake [6]</a></td>
+	<td valign=top width=57><a href="10shbk.rle">
+	    Block on ship [3]</a></td>
+	<td valign=top width=57><a href="10btbt1.rle">
+	    Up boat on boat [3]</a></td>
+	<td valign=top width=57><a href="10acbk1.rle">
+	    Block on carrier [6]</a></td>
+	<td valign=top width=57><a href="10hvbk.rle">
+	    Block on beehive [3]</a></td>
+	<td valign=top width=57><a href="10acbk2.rle">
+	    Block below carrier [4]</a></td>
+	<td valign=top width=59><a href="10btbt2.rle">
+	    Down boat on boat [4]</a></td>
+    </tr>
+</table><br>
+
+<map name="pp1-10">
+	<area shape=rect coords="0,0,59,61" href="10snbk.rle">
+	<area shape=rect coords="60,0,119,61" href="10shbk.rle">
+	<area shape=rect coords="120,0,179,61" href="10btbt1.rle">
+	<area shape=rect coords="180,0,239,61" href="10acbk1.rle">
+	<area shape=rect coords="240,0,299,61" href="10hvbk.rle">
+	<area shape=rect coords="300,0,359,61" href="10acbk2.rle">
+	<area shape=rect coords="360,0,421,39" href="10btbt2.rle">
+	<area shape=rect coords="360,40,399,61" href="10btbt2.rle">
+	<area shape=rect coords="400,40,421,61" href="pp1-10.rle">
+</map>
+
+<hr>
+<a name="10-bit p2"></a>
+<h2>The 1 ten-bit <a href="p2osc.htm">period-2 oscillator</a>:</h2>
+<a href="p2-10.rle"><img src="p2-10.gif" alt="10b P2"
+ width=61 height=61 usemap="#p2-10"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=59><a href="10qp.rle">
+	    Quadpole [6]</a></td>
+    </tr>
+</table><br>
+
+<map name="p2-10">
+	<area shape=rect coords="0,0,61,39" href="10qp.rle">
+	<area shape=rect coords="0,40,39,61" href="10qp.rle">
+	<area shape=rect coords="40,40,61,61" href="p2-10.rle">
+</map>
+
+<hr>
+<a name="10-bit pseudo-p2"></a>
+<h2>The 1 ten-bit <a href="pp2osc.htm">period-2 pseudo-oscillator</a>:</h2>
+<a href="pp2-10.rle"><img src="pp2-10.gif" alt="10b PP2"
+ width=61 height=61 usemap="#pp2-10"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=59><a href="10bcbk.rle">
+	    Block on beacon [4]</a></td>
+    </tr>
+</table><br>
+
+<map name="pp2-10">
+	<area shape=rect coords="0,0,61,39" href="10bcbk.rle">
+	<area shape=rect coords="0,40,39,61" href="10bcbk.rle">
+	<area shape=rect coords="40,40,61,61" href="pp2-10.rle">
+</map>
+
+<hr>
+<a name="10-bit constellation"></a>
+<h2>1 easily-constructable ten-bit
+<a href="constell.htm">constellation</a>:</h2>
+<a href="const-10.rle"><img src="const-10.gif" alt="10b con."
+ width=81 height=61 usemap="#const-10"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=79><a href="10lfbl.rle">
+	    Loaf and blinker [2]</a></td>
+    </tr>
+</table><br>
+
+<map name="const-10">
+	<area shape=rect coords="0,0,81,39" href="10lfbl.rle">
+	<area shape=rect coords="0,40,59,61" href="10lfbl.rle">
+	<area shape=rect coords="60,40,81,61" href="const-10.rle">
+</map>
+
+<hr>
+<a name="10-bit metheuselah"></a>
+<h2>1 ten-bit <a href="metheus.htm">metheuselah</a>:</h2>
+Since metheuselahs do not repeat, they are listed under the smallest known
+pattern which evolves along the same sequence.  Where there are more than
+one of these, the most common is shown.  Also, the syntheses are of various
+patterns along this sequence, not necessarily the first generation.<br>
+<a href="meth-10.rle"><img src="meth-10.gif" alt="10b met"
+ width=61 height=61 usemap="#meth-10"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=59><a href="10gm.rle">
+	    Two- glider mess [2]</a></td>
+    </tr>
+</table><br>
+
+<map name="meth-10">
+	<area shape=rect coords="0,0,61,39" href="10gm.rle">
+	<area shape=rect coords="0,40,39,61" href="10gm.rle">
+	<area shape=rect coords="40,40,61,61" href="meth-10.rle">
+</map>
+
+<hr>
+<b>Other sizes:</b>
+	<a href="3bits.htm">3-bit</a>,
+	<a href="4bits.htm">4-bit</a>,
+	<a href="5bits.htm">5-bit</a>,
+	<a href="6bits.htm">6-bit</a>,
+	<a href="7bits.htm">7-bit</a>,
+	<a href="8bits.htm">8-bit</a>,
+	<a href="9bits.htm">9-bit</a>,
+	10-bit,
+	<a href="11bits.htm">11-bit</a>,
+	<a href="12bits.htm">12-bit</a>,
+	<a href="13bits.htm">13-bit</a>,
+	<a href="14bits.htm">14-bit</a>,
+	<a href="15bits.htm">15-bit</a>,
+	<a href="16bits.htm">16-bit</a>,
+	<a href="17bits.htm">17-bit</a>,
+	<a href="18bits.htm">18-bit</a>,
+	<a href="19bits.htm">19-bit</a>,
+	<a href="20bits.htm">20-bit</a>.<br><br>
+
+<b>See also:</b>  Life objects sorted by:
+	<a href="objcount.htm">counts</a>,
+	<a href="objcost.htm">gliders</a>,
+	<a href="objname.htm">name</a>,
+	<a href="objsize.htm">size</a>,
+	or <a href="objtype.htm">type</a>.<br><br>
+
+<a href="index.htm">
+<img src="homepage.gif" alt="home" align=middle width=32 height=32>
+Back to Home Page</a>
+<a href="lifepage.htm">
+<img src="lifepage.gif" alt="life" align=middle width=32 height=32>
+Back to Life Page</a><br><br>
+
+</body></html>
+
+<!-- Localized -->

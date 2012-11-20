@@ -1,0 +1,17 @@
+x = 140, y = 90
+64bo$65b2o18bo$64b2o8bo8b2o$75b2o7b2o26bo$74b2o34b2o$98b2x11b2o5b2o18b
+2x$97bxbx17bobo17bxbx$96bx12bo6bo19bx$95bx11bobo5bo16b2xbx$67b2o26bxbx
+10b2o5bobo15bxbxbx$66bobo27b2x14bo3b2o12bx5b2x$68bo2b2o38b2o17b2x$70b
+2o32bo6bobo$72bo29bobo$103b2o2b2o$108b2o$107bo4bo$111b2o$111bobo14$
+116bo$29bo86bobo$27bobo86b2o$28b2o47bo4bo$75bobo4bobo12bx19bo19bx$28b
+2o46b2o4b2o12bxbx17bobo17bxbx$27bobo22b2x18b2o5b2o11b2xbxbx14b2obobo4b
+2o8b2xbx2bx$29bo3bo19bx19bo4b2o13bxb2x16bob2o4b2o10bxbxbx$32b2o16bx19b
+o9bo9bx19bo12bo6bx5bx$32bobo15b2x18b2o18b2x18b2o18b2x$76b3o$78bo$77bo
+9$45bo$44bo$40bo3b3o$41b2o7bo58bobo$40b2o6b2o59b2o$49b2o59bo5$58bo2bo
+26b2x18b2o$57bo31bx19bo4bobo$57bo3bo26bx19bo5b2o22b2x$7bo19bx19bo9b4o
+26bx19bo7bo21bxbx$6bobo17bxbx17bobo37bx19bo29bx$2b2obo2bo13b2xbx2bx13b
+2obo2bo33b2xbx16b2obo11bo14b2xbx$3bobobo15bxbxbx15bobobo35bxbxbx15bobo
+bo9bobo13bxbxbx$o5bo13bx5bx13bo5bo33bx5b2x12bo5b2o9b2o11bx5b2x$2o18b2x
+18b2o38b2x18b2o28b2x$26bx19bo69bo$26bx19bo68b2o$26bx19bo68bobo2$9b2o
+39b3o3b3o$9bobo37bo2bo3bo$9bo42bo4bo$5b3o40bo3bo$7bo40bo3bo$6bo45bo$
+49bobo5b2o$57bobo$57bo3$67b2o$66b2o$68bo!

@@ -1,0 +1,14 @@
+x = 125, y = 64
+51bo$50bo$46bo3b3o$47b2o7bo42bo$46b2o6b2o44bo$55b2o41b3o$88bo$59bo29bo
+7b3o$59bobo25b3o2bobo2bo$59b2o31b2o4bo17b2x$23bo69bo8bo14bx$24b2o75b2o
+12bx$23b2o2bobo20bobo22b2x18b2o4bobo11b2x$27b2o22b2o23bx19bo19bx$28bo
+22bo24bxbx17bobo17bxbx$77b2x18b2o18b2x$24bo7b2o6b2x18b2o18b2x18b2o18b
+2x$23b2o7bobo5bxbx17bobo17bxbx17bobo17bxbx$23bobo6bo9bx19bo19bx19bo19b
+x$42bxbx17bobo17bxbx17bobo17bxbx$43b2x11bo6b2o18b2x18b2o18b2x$55b2o$
+55bobo11$8bo$2bo5bobo$obo5b2o$b2o3$26b2x18b2o28b2x18b2o18b2x$8b3o16bx
+19bo5bo23bx19bo19bx$8bo16bx19bo7bobo19bx19bo19bx$9bo15b2x18b2o6b2o20b
+2x18b2o18b2x$26bx19bo29bx19bo19bx$5b2o19bxbx17bobo27bxbx17bobo17bxbx$
+6b2o19b2x18b2o6b3o19b2x18b2o18b2x$5bo3b2o44bo24b2x18b2o18b2x$9bobo44bo
+23bxbx17bobo17bxbx$9bo72bx19bo19bx$82b2x18b2o18bxbx$58b2o37bo9bo15b2x$
+58bobo37b2o5b2o$58bo38b2o7b2o2$46bo52bo$46b2o51b2o$45bobo50bobo5b3o$
+108bo$50b2o55bo$49bobo11b2o$51bo11bobo$54b2o7bo$55b2o$54bo!

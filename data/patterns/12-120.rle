@@ -1,0 +1,21 @@
+x = 127, y = 116
+113bo$111b2o$112b2o3$98bobo$99b2o$99bo2$96b2o25bx$96bobo24b3x$92bo3bo
+24b2x3bx$92b2o28bx2bx$91bobo14bo13bxbx$106bobo14bx$107b2o$103b2o$102bo
+bo$104bo$93bo$93b2o10b2o$92bobo10bobo$105bo11$105bobo$24bo80b2o$24bobo
+79bo$20bo3b2o$21b2o19b2x18b2o18b2x18b2o$20b2o19bxbx17bobo17bxbx17bobo$
+41bx19bo19bx19bo21bx$40b2x18b2o18b2x3bx14b2o3bo3bobo11b3x$84bxbx17bobo
+2b2o10b2x3bx$64b2o3bo13bxbx17bobo4bo11bx2bx$65b2obo13bxbx17bobo17bxbx$
+64bo3b3o12bx19bo7b3o9bx$111bo$112bo$69b2o31b2o$68b2o33b2o$70bo31bo3b2o
+$106bobo$106bo$57bo$58b2o$57b2o2$63bo$63bobo$63b2o$60bo$61b2o41bobo$
+60b2o42b2o$105bo$58bo44bo$59bo8bo35bo$57b3o6b2o30b2o2b3o$67b2o30b2o$
+98bo25b2x$84bx19bo20bx$83bxbx17bobo3bo13bx$83b2x18b2o3b2o13b2x$41b2x
+11bo6b2o18b2x18b2o5bobo10b2x$42bx11b2o6bo7b2o10bx19bo19bx$21b2o19bxbx
+8bobo6bobo4b2o11bxbx17bobo17bxbx$22b2o19b2x18b2o6bo11b2x18b2o18b2x$21b
+o3b2o$25bobo$25bo8$99bobo$99b2o$100bo8bo$88bo19bo$89b2o17b3o$88b2o11bo
+$101bobo$101b2o$107bo$105b2o$106b2o2$4b2o18b2x18b2o9bo18b2x18b2o$5bo
+19bx19bo8bo20bx19bo$3bo19bx19bo10b3o16bx4b2x13bo4b2o23bx$3b2o18b2x18b
+2o28b2x2bx2bx12b2o2bo2bo22b3x$b2o18b2x18b2o14bo13b2x4bx2bx10b2o4bo2bo
+20b2x3bx$2bo8bo10bx19bo13b2o14bx5b2x12bo5b2o22bx2bx$2bobo5bo11bxb2x16b
+ob2o10bobo13bxb2x16bob2o26bxbx$3b2o5b3o10bxbx17bobo27bxbx17bobo11bo15b
+x$106b2o$7b3o96bobo$7bo$8bo$bo58bo$b2o56b2o33b2o$obo56bobo33b2o6b2o$
+94bo7b2o$98b3o3bo$100bo$99bo!

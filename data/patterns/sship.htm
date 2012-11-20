@@ -1,0 +1,875 @@
+<html><head><title>Life Spaceships, Spaceship Flotillae, and Puffer Trains
+</title>
+<meta name="description"
+content="Conway's Game of Life:  Spaceship, flotilla, and puffer-train lists and glider syntheses">
+<meta name="keywords"
+content="conway game life spaceship flotilla puffer train object list glider synthesis">
+</head><body>
+
+<h1><center>Life Spaceships, Spaceship Flotillae, and Puffer Trains
+</center></h1>
+
+<center>
+	<b>Basic Spaceships:</b>
+	  <a href="#5-bit spaceship">5-bit</a> |
+	  <a href="#9-bit spaceship">9-bit</a> |
+	  <a href="#11-bit spaceship">11-bit</a> |
+	  <a href="#13-bit spaceship">13-bit</a> |
+	  <a href="#18-bit pseudo-spaceship">18-bit pseudo</a> |
+	  <a href="#20-bit spaceship">20-bit</a><br>
+	<b>Other Spaceships:</b>
+	  orthogonal <a href="#o2"><i>c</i>/2</a> |
+	  <a href="#2o5">2<i>c</i>/5</a> |
+	  <a href="#o3"><i>c</i>/3</a> |
+	  <a href="#o4"><i>c</i>/4</a> |
+	  <a href="#o5"><i>c</i>/5</a> |
+	  diagonal <a href="#d4"><i>c</i>/4</a> |
+	  <a href="#d12"><i>c</i>/12</a><br>
+	<b>Flotillae:</b>
+	  <a href="#2-spaceship flotilla">2-spaceship</a> |
+	  <a href="#4-spaceship beehive-pusher">4-spaceship beehive-pushers</a>
+	  <br>
+	<a href="#3-spaceship flotilla"><b>Three-spaceship flotillae</b></a>:
+	  <a href="#3-spaceship basic flotilla">Basic</a>,
+	  <a href="#3-spaceship complex flotilla">Complex</a>,
+	  <a href="#3-spaceship schick flotilla">Shick-ship</a><br>
+	<a href="#owss flotilla"><b>Overweight spaceship flotillae</b></a>:
+	  <a href="#7wss flotilla">7WSS</a>,
+	  <a href="#8wss flotilla">8WSS</a>,
+	  <a href="#9wss flotilla">9WSS</a>,
+	  <a href="#10wss flotilla">10WSS</a>,
+	  <a href="#11wss flotilla">11WSS</a>,
+	  <a href="#12wss flotilla">12WSS</a>,
+	  <a href="#13wss flotilla">13WSS</a>,
+	  <a href="#14wss flotilla">14WSS</a><br>
+	<b><a href="#puffer">Puffer trains</a></b>
+</center><br><br>
+
+All spaceships here move orthogonally at a velocity of c/2 unless otherwise
+indicated.<br><br>
+
+<hr>
+<a name="5-bit spaceship"></a>
+<h2>The 1 <a href="5bits.htm">five-bit</a> spaceship (c/4 diagonal):</h2>
+<a href="ss-5.rle"><img src="ss-5.gif" alt="5b SS"
+ width=61 height=61 usemap="#ss-5"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=59><a href="5gl.rle">
+	    Glider [2]</a></td>
+    </tr>
+</table><br>
+
+<map name="ss-5">
+	<area shape=rect coords="0,0,61,39" href="5gl.rle">
+	<area shape=rect coords="0,40,39,61" href="5gl.rle">
+	<area shape=rect coords="40,40,61,61" href="ss-5.rle">
+</map>
+
+<hr>
+<a name="9-bit spaceship"></a>
+<h2>The 1 <a href="9bits.htm">nine-bit</a> spaceship:</h2>
+<a href="ss-9.rle"><img src="ss-9.gif" alt="9b SS"
+ width=61 height=61 usemap="#ss-9"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=59><a href="9lw.rle">
+	    Light- weight space- ship (LWSS) [3]</a></td>
+    </tr>
+</table><br>
+
+<map name="ss-9">
+	<area shape=rect coords="0,0,61,39" href="9lw.rle">
+	<area shape=rect coords="0,40,39,61" href="9lw.rle">
+	<area shape=rect coords="40,40,61,61" href="ss-9.rle">
+</map>
+
+<hr>
+<a name="11-bit spaceship"></a>
+<h2>The 1 <a href="11bits.htm">eleven-bit</a> spaceship:</h2>
+<a href="ss-11.rle"><img src="ss-11.gif" alt="11b SS"
+ width=61 height=61 usemap="#ss-11"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=59><a href="11mw.rle">
+	    Middle- weight space- ship (MWSS) [3]</a></td>
+    </tr>
+</table><br>
+
+<map name="ss-11">
+	<area shape=rect coords="0,0,61,39" href="11mw.rle">
+	<area shape=rect coords="0,40,39,61" href="11mw.rle">
+	<area shape=rect coords="40,40,61,61" href="ss-11.rle">
+</map>
+
+<hr>
+<a name="13-bit spaceship"></a>
+<h2>The 1 <a href="13bits.htm">thirteen-bit</a> spaceship:</h2>
+<a href="ss-13.rle"><img src="ss-13.gif" alt="13b SS"
+ width=61 height=61 usemap="#ss-13"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=59><a href="13hw.rle">
+	    Heavy- weight space- ship (HWSS) [3]</a></td>
+    </tr>
+</table><br>
+
+<map name="ss-13">
+	<area shape=rect coords="0,0,61,39" href="13hw.rle">
+	<area shape=rect coords="0,40,39,61" href="13hw.rle">
+	<area shape=rect coords="40,40,61,61" href="ss-13.rle">
+</map>
+
+<hr>
+<a name="18-bit pseudo-spaceship"></a>
+<h2>The 1 <a href="18bits.htm">eighteen-bit</a> pseudo-spaceship:</h2>
+<a href="ss-18.rle"><img src="ss-18.gif" alt="18b PSS"
+ width=81 height=61 usemap="#ss-18"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=79><a href="18lwlw.rle">
+	    LWSS on LWSS [7]</a></td>
+    </tr>
+</table><br>
+
+<map name="ss-18">
+	<area shape=rect coords="0,0,81,39" href="18lwlw.rle">
+	<area shape=rect coords="0,40,59,61" href="18lwlw.rle">
+	<area shape=rect coords="60,40,81,61" href="ss-18.rle">
+</map>
+
+<hr>
+<a name="20-bit spaceship"></a>
+<h2>The 5 <a href="20bits.htm">twenty-bit</a> spaceships:</h2>
+<a href="ss-20.rle"><img src="ss-20.gif" alt="20-bit spaceships"
+ width=321 height=61 usemap="#ss-20"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=67><a href="20mwlw1.rle">
+	    LWSS on MWSS #1 [7]</a></td>
+	<td valign=top width=57><a href="20mwmw1.rle">
+	    MWSS on HWSS #1 [7]</a></td>
+	<td valign=top width=57><a href="20hwlw1.rle">
+	    LWSS on HWSS #1 [7]</a></td>
+	<td valign=top width=57><a href="20hwlw2.rle">
+	    LWSS on HWSS #2 [7]</a></td>
+	<td valign=top width=69><a href="20mwmw2.rle">
+	    MWSS on MWSS #2 [7]</a></td>
+    </tr>
+</table><br>
+
+<map name="ss-20">
+	<area shape=rect coords="0,0,69,61" href="20mwlw1.rle">
+	<area shape=rect coords="70,0,129,61" href="20mwmw1.rle">
+	<area shape=rect coords="130,0,189,61" href="20hwlw1.rle">
+	<area shape=rect coords="190,0,249,61" href="20hwlw2.rle">
+	<area shape=rect coords="250,0,321,39" href="20mwmw2.rle">
+	<area shape=rect coords="250,40,299,61" href="20mwmw2.rle">
+	<area shape=rect coords="300,40,321,61" href="ss-20.rle">
+</map>
+
+<hr>
+<a name="o2"></a>
+<h2>Miscellaneous <i>c</i>/2 Orthogonal Spaceships</h2>
+This is a small sampling of spaceships which move orthogonally at a velocity
+of <i>c</i>/2.<br>
+<a href="ss-o2.rle"><img src="ss-o2.gif" alt="c/2 orthogonal spaceships"
+ width=581 height=81></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=87>MWSS pushing pushalong [x]</td>
+	<td valign=top width=77>HWSS escorting half of X66 [x]</td>
+	<td valign=top width=77>X66 [x]</td>
+	<td valign=top width=77>Two HWSS dragging boat [x]</td>
+	<td valign=top width=77>Two LWSS dragging 'A' [x]</td>
+	<td valign=top width=77>
+	    Two LWSS and two MWSS pushing comma [x]</td>
+	<td valign=top width=89>(unnamed) [x]</td>
+    </tr>
+</table><br>
+
+<hr>
+<a name="2o5"></a>
+<h2>Miscellaneous 2<i>c</i>/5 Orthogonal Spaceships</h2>
+This is a small sampling of spaceships which move orthogonally at a velocity
+of 2<i>c</i>/5.<br>
+<a href="ss-2o5.rle"><img src="ss-2o5.gif" alt="2c/5 orthogonal spaceships"
+ width=481 height=121></a><br>
+
+<hr>
+<a name="o3"></a>
+<h2>Miscellaneous <i>c</i>/3 Orthogonal Spaceships</h2>
+This is a small sampling of spaceships which move orthogonally at a velocity
+of <i>c</i>/3.<br>
+<a href="ss-o3.rle"><img src="ss-o3.gif" alt="c/3 orthogonal spaceships"
+ width=581 height=161></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=87>(unnamed) [x]</td>
+	<td valign=top width=77>(unnamed) [x]</td>
+	<td valign=top width=77>Turtle [x]</td>
+	<td valign=top width=157>(unnamed) [x]</td>
+	<td valign=top width=77>Dart [x]</td>
+	<td valign=top width=89>(unnamed) [x]</td>
+    </tr>
+</table><br>
+
+<hr>
+<a name="o4"></a>
+<h2>Miscellaneous <i>c</i>/4 Orthogonal Spaceships</h2>
+This is a small sampling of spaceships which move orthogonally at a velocity
+of <i>c</i>/4.<br>
+<a href="ss-o4.rle"><img src="ss-o4.gif" alt="c/4 orthogonal spaceships"
+ width=461 height=321></a><br>
+
+<hr>
+<a name="o5"></a>
+<h2>Miscellaneous <i>c</i>/5 Orthogonal Spaceships</h2>
+This is a small sampling of spaceships which move orthogonally at a velocity
+of <i>c</i>/5.<br>
+<a href="ss-o5.rle"><img src="ss-o5.gif" alt="c/5 ortho sship"
+ width=121 height=181></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=119>Snail [x]</td>
+    </tr>
+</table><br>
+
+<hr>
+<a name="d4"></a>
+<h2>Miscellaneous <i>c</i>/4 Diagonal Spaceships</h2>
+This is a small sampling of spaceships which move diagonally at a velocity
+of <i>c</i>/4.<br>
+<a href="ss-d4.rle"><img src="ss-d4.gif" alt="c/4 diagonal spaceships"
+ width=461 height=181></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=87><a href="5gl.rle">Glider [2]</a></td>
+	<td valign=top width=77>Orion [x]</td>
+	<td valign=top width=117>Swan [x]</td>
+	<td valign=top width=169>(unnamed) [x]</td>
+    </tr>
+
+    <tr>
+	<td valign=top width=87>(unnamed) [x]</td>
+    </tr>
+
+</table><br>
+
+<hr>
+<a name="d12"></a>
+<h2>Miscellaneous <i>c</i>/12 Diagonal Spaceships</h2>
+Corderman's switch-engine forms the basis for several
+<a href="#puffer">puffer-trains</a>.
+<a href="lifecred.htm#hickerson">Dean Hickerson</a> has found several ways
+to combine multiple switch-engines to produce clean spaceships which move
+diagonally at a velocity of <i>c</i>/12.  This is the smallest one known.<br>
+<a href="ss-d12.rle"><img src="ss-d12.gif" alt="c/12 diagonal spaceships"
+ width=301 height=281></a><br>
+
+<hr>
+<a name="2-spaceship flotilla"></a>
+<h2>The 48 two-spaceship flotillae:</h2>
+These are all the two-spaceship flotillae composed of the basic
+spaceships and their known simple variants.<br>
+<a href="ss-2.rle"><img src="ss-2.gif" alt="2-spaceship flotillae"
+ width=641 height=421 usemap="#ss-2"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=77><a href="18lwlw.rle">
+	    LWSS on LWSS [7]</a><b>#</b></td>
+	<td valign=top width=77><a href="20mwlw1.rle">
+	    LWSS on MWSS #1 [7]</a></td>
+	<td valign=top width=77><a href="23mwlw2.rle">
+	    LWSS on MWSS #2 [7]</a></td>
+	<td valign=top width=77><a href="23mwlw3.rle">
+	    LWSS on MWSS #3 [7]</a></td>
+	<td valign=top width=77><a href="20hwlw1.rle">
+	    LWSS on HWSS #1 [7]</a></td>
+	<td valign=top width=77><a href="20hwlw2.rle">
+	    LWSS on HWSS #2 [7]</a></td>
+	<td valign=top width=77><a href="22hwlw3.rle">
+	    LWSS on HWSS #3 [7]</a></td>
+	<td valign=top width=79><a href="22hwlw4.rle">
+	    LWSS on HWSS #4 [7]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=77><a href="22hwlw5.rle">
+	    LWSS on HWSS #5 [7]</a></td>
+	<td valign=top width=77><a href="22hwlw6.rle">
+	    LWSS on HWSS #6 [7]</a></td>
+	<td valign=top width=77><a href="25hwlw7.rle">
+	    LWSS on HWSS #7 [7]</a></td>
+	<td valign=top width=77><a href="25hwlw8.rle">
+	    LWSS on HWSS #8 [7]</a><b>#</b></td>
+	<td valign=top width=77><a href="20mwmw1.rle">
+	    MWSS on MWSS #1 [7]</a></td>
+	<td valign=top width=77><a href="20mwmw2.rle">
+	    MWSS on MWSS #2 [7]</a></td>
+	<td valign=top width=77><a href="24mwmw3.rle">
+	    MWSS on MWSS #3 [7]</a><b>*</b></td>
+	<td valign=top width=79><a href="26mwmw4.rle">
+	    MWSS on MWSS #4 [7]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=77><a href="26mwmw5.rle">
+	    MWSS on MWSS #5 [7]</a></td>
+	<td valign=top width=77><a href="22hwmw1.rle">
+	    MWSS on HWSS #1 [7]</a></td>
+	<td valign=top width=77><a href="22hwmw2.rle">
+	    MWSS on HWSS #2 [7]</a></td>
+	<td valign=top width=77><a href="22hwmw3.rle">
+	    MWSS on HWSS #3 [7]</a></td>
+	<td valign=top width=77><a href="24hwmw4.rle">
+	    MWSS on HWSS #4 [7]</a></td>
+	<td valign=top width=77><a href="24hwmw5.rle">
+	    MWSS on HWSS #5 [7]</a></td>
+	<td valign=top width=77><a href="24hwmw6.rle">
+	    MWSS on HWSS #6 [7]</a></td>
+	<td valign=top width=79><a href="24hwmw7.rle">
+	    MWSS on HWSS #7 [7]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=77><a href="24hwmw8.rle">
+	    MWSS on HWSS #8 [7]</a></td>
+	<td valign=top width=77><a href="25hwmw9.rle">
+	    MWSS on HWSS #9 [7]</a><b></b></td>
+	<td valign=top width=77><a href="27hwmw10.rle">
+	    MWSS on HWSS #10 [7]</a></td>
+	<td valign=top width=77><a href="28hwmw11.rle">
+	    MWSS on HWSS #11 [7]</a></td>
+	<td valign=top width=77><a href="28hwmw12.rle">
+	    MWSS on HWSS #12 [7]</a></td>
+	<td valign=top width=77><a href="28hwmw13.rle">
+	    MWSS on HWSS #13 [7]</a></td>
+	<td valign=top width=77><a href="28hwmw14.rle">
+	    MWSS on HWSS #14 [7]</a></td>
+	<td valign=top width=79><a href="28hwmw15.rle">
+	    MWSS on HWSS #15 [7]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=77><a href="22hwhw1.rle">
+	    HWSS on HWSS #1 [7]</a></td>
+	<td valign=top width=77><a href="22hwhw2.rle">
+	    HWSS on HWSS #2 [7]</a></td>
+	<td valign=top width=77><a href="26hwhw3.rle">
+	    HWSS on HWSS #3 [7]</a><b>#</b></td>
+	<td valign=top width=77><a href="26hwhw4.rle">
+	    HWSS on HWSS #4 [6]</a></td>
+	<td valign=top width=77><a href="26hwhw5.rle">
+	    HWSS on HWSS #5 [7]</a></td>
+	<td valign=top width=77><a href="29hwhw6.rle">
+	    HWSS on HWSS #6 [7]</a></td>
+	<td valign=top width=77><a href="29hwhw7.rle">
+	    HWSS on HWSS #7 [7]</a></td>
+	<td valign=top width=79><a href="29hwhw8.rle">
+	    HWSS on HWSS #8 [7]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=77><a href="30hwhw9.rle">
+	    HWSS on HWSS #9 [7]</a><b></b></td>
+	<td valign=top width=77><a href="31hwhw10.rle">
+	    HWSS on HWSS #10 [7]</a></td>
+	<td valign=top width=77><a href="24hwjw.rle">
+	    Sidecar on HWSS [8]</a><b>*</b></td>
+	<td valign=top width=77><a href="28coelw.rle">
+	    LWSS on Coe ship [8]</a><b>*</b></td>
+	<td valign=top width=77><a href="39lwsslw.rle">
+	    Schick ship behind two LWSS [10]</a><b>*</b></td>
+	<td valign=top width=77><a href="42hwsslw.rle">
+	    Schick ship behind HWSS and LWSS [11]</a><b>*</b></td>
+	<td valign=top width=77><a href="42mwssmw.rle">
+	    Schick ship behind two MWSS [11]</a><b>*</b></td>
+	<td valign=top width=79><a href="44hwsshw.rle">
+	    Schick ship behind two HWSS [14]</a><b>*</b></td>
+    </tr>
+</table><br>
+
+<b>NOTE:</b> The three marked <b>#</b> are pseudo-spaceships;
+all but the seven marked <b>*</b> can be built from either side,
+facilitating construction of larger flotillae.<br><br>
+
+<map name="ss-2">
+	<area shape=rect coords="0,0,79,59" href="18lwlw.rle">
+	<area shape=rect coords="80,0,159,59" href="20mwlw1.rle">
+	<area shape=rect coords="160,0,239,59" href="23mwlw2.rle">
+	<area shape=rect coords="240,0,319,59" href="23mwlw3.rle">
+	<area shape=rect coords="320,0,399,59" href="20hwlw1.rle">
+	<area shape=rect coords="400,0,479,59" href="20hwlw2.rle">
+	<area shape=rect coords="480,0,559,59" href="22hwlw3.rle">
+	<area shape=rect coords="560,0,641,59" href="22hwlw4.rle">
+
+	<area shape=rect coords="0,60,79,119" href="22hwlw5.rle">
+	<area shape=rect coords="80,60,159,119" href="22hwlw6.rle">
+	<area shape=rect coords="160,60,239,119" href="25hwlw7.rle">
+	<area shape=rect coords="240,60,319,119" href="25hwlw8.rle">
+	<area shape=rect coords="320,60,399,119" href="20mwmw1.rle">
+	<area shape=rect coords="400,60,479,119" href="20mwmw2.rle">
+	<area shape=rect coords="480,60,559,119" href="24mwmw3.rle">
+	<area shape=rect coords="560,60,641,119" href="26mwmw4.rle">
+
+	<area shape=rect coords="0,120,79,179" href="26mwmw5.rle">
+	<area shape=rect coords="80,120,159,179" href="22hwmw1.rle">
+	<area shape=rect coords="160,120,239,179" href="22hwmw2.rle">
+	<area shape=rect coords="240,120,319,179" href="22hwmw3.rle">
+	<area shape=rect coords="320,120,399,179" href="24hwmw4.rle">
+	<area shape=rect coords="400,120,479,179" href="24hwmw5.rle">
+	<area shape=rect coords="480,120,559,179" href="24hwmw6.rle">
+	<area shape=rect coords="560,120,641,179" href="24hwmw7.rle">
+
+	<area shape=rect coords="0,180,79,239" href="24hwmw8.rle">
+	<area shape=rect coords="80,180,159,239" href="25hwmw9.rle">
+	<area shape=rect coords="160,180,239,239" href="27hwmw10.rle">
+	<area shape=rect coords="240,180,319,239" href="28hwmw11.rle">
+	<area shape=rect coords="320,180,399,239" href="28hwmw12.rle">
+	<area shape=rect coords="400,180,479,239" href="28hwmw13.rle">
+	<area shape=rect coords="480,180,559,239" href="28hwmw14.rle">
+	<area shape=rect coords="560,180,641,239" href="28hwmw15.rle">
+
+	<area shape=rect coords="0,240,79,299" href="22hwhw1.rle">
+	<area shape=rect coords="80,240,159,299" href="22hwhw2.rle">
+	<area shape=rect coords="160,240,239,299" href="26hwhw3.rle">
+	<area shape=rect coords="240,240,319,299" href="26hwhw4.rle">
+	<area shape=rect coords="320,240,399,299" href="26hwhw5.rle">
+	<area shape=rect coords="400,240,479,299" href="29hwhw6.rle">
+	<area shape=rect coords="480,240,559,299" href="29hwhw7.rle">
+	<area shape=rect coords="560,240,641,299" href="29hwhw7.rle">
+
+	<area shape=rect coords="0,300,79,421" href="30hwhw9.rle">
+	<area shape=rect coords="80,300,159,421" href="31hwhw10.rle">
+	<area shape=rect coords="160,300,239,421" href="24hwjw.rle">
+	<area shape=rect coords="240,300,319,421" href="28coelw.rle">
+	<area shape=rect coords="320,300,399,421" href="39lwsslw.rle">
+	<area shape=rect coords="400,300,479,421" href="42hwsslw.rle">
+	<area shape=rect coords="480,300,559,421" href="42mwssmw.rle">
+	<area shape=rect coords="560,300,641,399" href="44hwsshw.rle">
+	<area shape=rect coords="560,400,619,421" href="44hwsshw.rle">
+	<area shape=rect coords="620,400,641,421" href="ss-2.rle">
+</map>
+
+<hr>
+<a name="3-spaceship flotilla"></a>
+<h2>Three spaceship flotillae</h2>
+There are numerous basic three-spaceship flotillae.  There are too many to list
+individually, but they are summarized here.  Some of these syntheses, or at
+least the mechanisms involved, may be added if time and space permit.<br><br>
+
+<a name="3-spaceship basic flotilla"></a>
+<h3>Three-spaceship basic flotillae</h3>
+There are numerous three-spaceship flotillae based on the three basic
+spaceships.  Two require special syntheses;  all others can be synthesized
+by combining pairs of the above two-spaceship flotilla mechanisms.<br><br>
+
+<ul>
+    <li>1 LWSS on LWSS on LWSS
+    <li>3 MWSS on LWSS on LWSS
+    <li>8 HWSS on LWSS on LWSS
+    <li>6 LWSS on MWSS on LWSS
+    <li>27 MWSS on MWSS on LWSS
+    <li>45 HWSS on MWSS on LWSS
+    <li>36 LWSS on HWSS on LWSS
+    <li>120 MWSS on HWSS on LWSS
+    <li>144 HWSS on HWSS on HWSS
+    <li>6 MWSS on LWSS on MWSS
+    <li>24 HWSS on LWSS on MWSS
+    <li>45 MWSS on MWSS on MWSS, one with a special synthesis
+	(<a href="39mmm.rle">MWSS #3 on MWSS on MWSS #3</a>)
+    <li>135 HWSS on MWSS on MWSS
+    <li>120 MWSS on HWSS on MWSS
+    <li>270 HWSS on HWSS on MWSS
+    <li>36 HWSS on LWSS on HWSS
+    <li>120 HWSS on MWSS on HWSS
+    <li>171 HWSS on HWSS on HWSS
+</ul><br><br>
+
+<a name="3-spaceship complex flotilla"></a>
+<h3>Three-spaceship complex flotillae</h3>
+There are several three-component flotillae which include one or more
+non-self-sufficient components.  One requires a special synthesis;  all others
+can be synthesized by combining pairs of the above two-spaceship flotilla
+mechanisms.<br><br>
+
+<ul>
+    <li>1 HWSS w/sidecar on LWSS
+    <li>3 HWSS w/sidecar on MWSS
+    <li>7 HWSS w/sidecar on HWSS
+    <li>8 LWSS on HWSS w/sidecar
+    <li>15 MWSS on HWSS w/sidecar
+    <li>18 HWSS on HWSS w/sidecar
+    <li>1 HWSS w/two sidecars
+    <li>1 Coe ship on LWSS on LWSS
+    <li>3 Coe ship on LWSS on MWSS
+    <li>8 Coe ship on LWSS on HWSS
+    <li>2 Two coe ships on LWSS
+    <li>8 LWSS on Coe ship on LWSS
+    <li>15 MWSS on Coe ship on LWSS, two with special syntheses
+	(<a href="37hjh9.rle">HWSS on Sidecar on HWSS #9</a>
+	(which is P12 instead of P16), and
+	<a href="37hjh10.rle">HWSS on Sidecar on HWSS #10</a>,
+    <li>17 HWSS on Coe ship on LWSS
+    <li>1 Sidecar on Coe ship on LWSS
+    <li>1 HWSS w/sidecar on Coe ship
+</ul><br><br>
+
+<a name="3-spaceship schick flotilla"></a>
+<h3>Three spaceship flotillae with Schick ships</h3>
+There are several three-component flotillae which involve the Schick-ship
+engine tag-along.  (The last two are dirty puffers, rather than spaceships.)
+One cannot yet be synthesized;  all others can be synthesized by combining
+pairs of the above two-spaceship flotilla mechanisms.<br><br>
+
+<ul>
+    <li>1 LWSS on Schick ship behind LWSS and LWSS
+    <li>3 MWSS on Schick ship behind LWSS and LWSS
+    <li>8 HWSS on Schick ship behind LWSS and LWSS
+    <li>1 LWSS on Schick ship behind LWSS and HWSS
+    <li>3 MWSS on Schick ship behind LWSS and HWSS
+    <li>8 HWSS on Schick ship behind LWSS and HWSS
+    <li>3 LWSS on Schick ship behind MWSS and MWSS
+    <li>9 MWSS on Schick ship behind MWSS and MWSS,
+	one with no known synthesis
+	(<a href="56msmm.rle">Schick ship behind two MWSS on MWSS #3</a>)
+    <li>15 HWSS on Schick ship behind MWSS and MWSS
+    <li>8 LWSS on Schick ship behind HWSS and LWSS
+    <li>15 MWSS on Schick ship behind HWSS and LWSS
+    <li>18 HWSS on Schick ship behind HWSS and LWSS,
+    <li>8 LWSS on Schick ship behind HWSS and HWSS
+    <li>15 MWSS on Schick ship behind HWSS and HWSS
+    <li>18 HWSS on Schick ship behind HWSS and HWSS,
+    <li>1 Sidecar on Schick ship behind HWSS and LWSS
+    <li>1 Sidecar on Schick ship behind HWSS and HWSS
+    <li>1 Coe ship on Schick ship behind LWSS and LWSS (dirty puffer)
+    <li>1 Coe ship on Schick ship behind LWSS and HWSS (dirty puffer)
+</ul><br><br>
+
+All of the above can be built in two stages using the mechanisms shown above
+in <a href="#2-spaceship flotilla">2-spaceship flotillae</a>, except for
+the following (the second and third involve new escort geometries
+involving a HWSS escorting a sidecar, but otherwise using mechanisms used
+elsewhere);  the others involve combining two of the 2-spaceship mechanisms
+which cannot be built from either side):<br>
+<a href="ss-3.rle"><img src="ss-3.gif" alt="complex 3-spaceship flotillae"
+ width=401 height=121 usemap="#ss-3"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=97><a href="39mmm.rle">
+	    MWSS #3 on MWSS on MWSS #3 [17]</a></td>
+	<td valign=top width=97><a href="37hjh9.rle">
+	    HWSS on Sidecard on HWSS #9 [14]</a></td>
+	<td valign=top width=97><a href="37hjh10.rle">
+	    HWSS on Sidecard on HWSS #10 [14]</a></td>
+	<td valign=top width=99><a href="56msmm.rle">
+	    Schick ship behind two MWSS on MWSS #3 [x]</a></td>
+    </tr>
+</table><br>
+
+<map name="ss-3">
+	<area shape=rect coords="0,0,99,121" href="39mmm.rle">
+	<area shape=rect coords="100,0,199,121" href="37hjh9.rle">
+	<area shape=rect coords="200,0,299,121" href="37hjh10.rle">
+	<area shape=rect coords="300,0,401,99" href="56msmm.rle">
+	<area shape=rect coords="300,100,379,121" href="56msmm.rle">
+	<area shape=rect coords="380,100,401,121" href="ss-3.rle">
+</map>
+
+These do not include the many spaceships and puffer trains which can be formed
+by adding an escort spaceship to spark the exhaust plume from a Coe ship
+(and which can be usually be synthesized using the above methods.)<br><br>
+
+<hr>
+<a name="4-spaceship beehive-pusher"></a>
+<h2>The 45 four-spaceship beehive-pushers:</h2>
+<a href="ss-hv.rle"><img src="ss-hv.gif" alt="4-spaceship beehive-pushers"
+ width=641 height=481 usemap="#ss-hv"></a><br><br>
+
+<map name="ss-hv">
+	<area shape=rect coords="0,0,79,79" href="42llvll.rle">
+	<area shape=rect coords="80,0,159,79" href="44llvml.rle">
+	<area shape=rect coords="160,0,239,79" href="46llvmm.rle">
+	<area shape=rect coords="240,0,319,79" href="46llvhl.rle">
+	<area shape=rect coords="320,0,399,79" href="48llvhm.rle">
+	<area shape=rect coords="400,0,479,79" href="50llvhh.rle">
+	<area shape=rect coords="480,0,559,79" href="44mlvll.rle">
+	<area shape=rect coords="560,0,641,79" href="46mlvml.rle">
+
+	<area shape=rect coords="0,80,79,159" href="46mlvlm.rle">
+	<area shape=rect coords="80,80,159,159" href="48mlvmm.rle">
+	<area shape=rect coords="160,80,239,159" href="48mlvhl.rle">
+	<area shape=rect coords="240,80,319,159" href="48mlvlh.rle">
+	<area shape=rect coords="320,80,399,159" href="50mlvhm.rle">
+	<area shape=rect coords="400,80,479,159" href="50mlvmh.rle">
+	<area shape=rect coords="480,80,559,159" href="52mlvhh.rle">
+	<area shape=rect coords="560,80,641,159" nohref>
+
+	<area shape=rect coords="0,160,79,239" href="46mmvll.rle">
+	<area shape=rect coords="80,160,159,239" href="48mmvml.rle">
+	<area shape=rect coords="160,160,239,239" href="50mmvmm.rle">
+	<area shape=rect coords="240,160,319,239" href="50mmvhl.rle">
+	<area shape=rect coords="320,160,399,239" href="52mmvhm.rle">
+	<area shape=rect coords="400,160,479,239" href="54mmvhh.rle">
+	<area shape=rect coords="480,160,559,239" href="46hlvll.rle">
+	<area shape=rect coords="560,160,641,239" href="48hlvml.rle">
+
+	<area shape=rect coords="0,240,79,319" href="48hlvlm.rle">
+	<area shape=rect coords="80,240,159,319" href="50hlvmm.rle">
+	<area shape=rect coords="160,240,239,319" href="50hlvhl.rle">
+	<area shape=rect coords="240,240,319,319" href="50hlvlh.rle">
+	<area shape=rect coords="320,240,399,319" href="52hlvhm.rle">
+	<area shape=rect coords="400,240,479,319" href="52hlvmh.rle">
+	<area shape=rect coords="480,240,559,319" href="54hlvhh.rle">
+	<area shape=rect coords="560,240,641,319" nohref>
+
+	<area shape=rect coords="0,320,79,399" href="48hmvll.rle">
+	<area shape=rect coords="80,320,159,399" href="50hmvml.rle">
+	<area shape=rect coords="160,320,239,399" href="50hmvlm.rle">
+	<area shape=rect coords="240,320,319,399" href="52hmvmm.rle">
+	<area shape=rect coords="320,320,399,399" href="52hmvhl.rle">
+	<area shape=rect coords="400,320,479,399" href="52hmvlh.rle">
+	<area shape=rect coords="480,320,559,399" href="54hmvhm.rle">
+	<area shape=rect coords="560,320,641,399" href="54hmvmh.rle">
+
+	<area shape=rect coords="0,400,79,481" href="56hmvhh.rle">
+	<area shape=rect coords="80,400,159,481" href="50hhvll.rle">
+	<area shape=rect coords="160,400,239,481" href="52hhvml.rle">
+	<area shape=rect coords="240,400,319,481" href="54hhvmm.rle">
+	<area shape=rect coords="320,400,399,481" href="54hhvhl.rle">
+	<area shape=rect coords="400,400,479,481" href="56hhvhm.rle">
+	<area shape=rect coords="480,400,559,481" href="58hhvhh.rle">
+	<area shape=rect coords="560,400,641,459" nohref>
+	<area shape=rect coords="560,460,619,481" nohref>
+	<area shape=rect coords="620,460,641,481" href="ss-hv.rle">
+</map>
+
+<hr>
+<a name="owss flotilla"></a>
+<h2>Overweight spaceship flotillae</h2>
+
+Spaceships with bodies greater than 6 cells long (HWSS) are naturally unstable
+because they produce sparks which survive long enough to damage the spaceship.
+However, such spaceships can exist in flotillae with escort spaceships which
+suppress such sparks.  Such overweight spaceships (OWSS) with bodies up to
+14 cells long (14WSS) can exist in three-spaceship flotillae.  Larger OWSS
+themselves require smaller OWSS as escorts, requiring flotillae of 5 or more
+spaceships.<br><br>
+
+There are two fairly general mechanisms which can synthesize many of the
+overweight spaceships.<br><br>
+
+The first mechanism involves variations of the two-glider-boat synthesis of the
+the MWSS, yielding simple syntheses of 7WSS, 8WSS, and 9WSS.  Most, if not all,
+LWSS/MWSS/HWSS escorts can be added on the right side;  however, left-side
+escorts must generally be ahead of or beside the OWSS.<br><br>
+
+The second mechanism involves colliding four gliders into a long-ship, yielding
+a double-headed spaceship, which expands in two directions.  2-3 additional
+gliders are then used to remove one of the heads once the body has reached
+the desired length.  This can produce all OWSS engines 7WSS through 14WSS.
+Most, if not all, escorts can be added on the left side;  however, right-side
+escorts must generally be behind or beside the OWSS.<br><br>
+
+For the smaller engines (7WSS-9WSS), these two methods tend to complement
+each other well, and can produce most configurations.<br><br>
+
+There is one escort configuration, in which the escort suppresses the body
+of the OWSS itself rather than its sparks, currently defies all methods of
+synthesis.  This involves one 9WSS, two 10WSS, two 11WSS, and one 12WSS escort
+configuration.<br><br>
+
+<a name="7wss flotilla"></a>
+<h3>Seven-long overweight spaceship flotillae</h3>
+There are many three-spaceship flotillae including seven-long overweight
+spaceships (7WSS).  All can be synthesized.<br><br>
+
+<ul>
+    <li>6 LWSS on 7WSS on LWSS
+    <li>24 MWSS on 7WSS on LWSS
+    <li>27 HWSS on 7WSS on LWSS
+    <li>36 MWSS on 7WSS on MWSS
+    <li>72 MWSS on 7WSS on HWSS
+    <li>45 HWSS on 7WSS on HWSS, one with special synthesis
+    <li>3 LWSS on 7WSS on Coe ship
+    <li>8 LWSS on 7WSS on Coe ship
+    <li>9 LWSS on 7WSS on Coe ship
+    <li>1 Coe ship on 7WSS on Coe ship
+</ul><br><br>
+
+<a name="8wss flotilla"></a>
+<h3>Eight-long overweight spaceship flotillae</h3>
+There are many three-spaceship flotillae including eight-long overweight
+spaceships (8WSS).  All but five can be synthesized.<br><br>
+
+<ul>
+    <li>6 LWSS on 8WSS on LWSS
+    <li>21 MWSS on 8WSS on LWSS
+    <li>27 HWSS on 8WSS on LWSS
+    <li>28 MWSS on 8WSS on MWSS
+    <li>63 MWSS on 8WSS on HWSS
+    <li>45 HWSS on 8WSS on HWSS, five with no known synthesis
+</ul><br><br>
+
+<a name="9wss flotilla"></a>
+<h3>Nine-long overweight spaceship flotillae</h3>
+There are many three-spaceship flotillae including nine-long overweight
+spaceships (9WSS).  The one intractible escort configuration is used in 15;
+all but four of the rest can be synthesized.<br><br>
+
+<ul>
+    <li>6 LWSS on 9WSS on LWSS
+    <li>24 MWSS on 9WSS on LWSS, 3 with intractible escort
+    <li>21 HWSS on 9WSS on LWSS
+    <li>36 MWSS on 9WSS on MWSS, 8 with intractible escort
+    <li>56 MWSS on 9WSS on HWSS, 7 with intractible escort
+    <li>28 HWSS on 9WSS on HWSS, four with no known synthesis
+</ul><br><br>
+
+<a name="10wss flotilla"></a>
+<h3>Ten-long overweight spaceship flotillae</h3>
+There are many three-spaceship flotillae including ten-long overweight
+spaceships (10WSS).  At present, very few of these can be synthesized.<br><br>
+
+<ul>
+    <li>2 LWSS on 10WSS on LWSS, none yet synthesized
+    <li>12 MWSS on 10WSS on LWSS, 2 with intractible escort,
+	4 synthesized so far
+    <li>16 HWSS on 10WSS on LWSS, 2 with intractible escort,
+	2 synthesized so far
+    <li>21 MWSS on 10WSS on MWSS, 6 with intractible escort,
+	7 synthesized so far
+    <li>48 MWSS on 10WSS on HWSS, 13 with intractible escort,
+	4 synthesized so far
+    <li>36 HWSS on 10WSS on HWSS, 8 with intractible escort,
+	1 synthesized so far
+</ul><br><br>
+
+<a name="11wss flotilla"></a>
+<h3>Eleven-long overweight spaceship flotillae</h3>
+There are many three-spaceship flotillae including eleven-long overweight
+spaceships (11WSS).  At present, very few of these can be synthesized.<br><br>
+
+<ul>
+    <li>1 LWSS on 11WSS on LWSS, not yet synthesized
+    <li>4 MWSS on 11WSS on LWSS, 1 with intractible escort,
+	1 synthesized so far
+    <li>6 HWSS on 11WSS on LWSS, 1 with intractible escort,
+	1 synthesized so far
+    <li>10 MWSS on 11WSS on MWSS, 4 with intractible escort,
+	1 synthesized so far
+    <li>24 MWSS on 11WSS on HWSS, 9 with intractible escort,
+	4 synthesized so far
+    <li>21 HWSS on 11WSS on HWSS, 6 with intractible escort,
+	4 synthesized so far
+</ul><br><br>
+
+<a name="12wss flotilla"></a>
+<h3>Twelve-long overweight spaceship flotillae</h3>
+There are several three-spaceship flotillae including twelve-long overweight
+spaceships (12WSS).  At present, none of these can be synthesized.<br><br>
+
+<ul>
+    <li>1 LWSS on 12WSS on LWSS
+    <li>1 MWSS on 12WSS on LWSS
+    <li>4 HWSS on 12WSS on LWSS, 1 with intractible escort
+    <li>1 MWSS on 12WSS on MWSS
+    <li>4 MWSS on 12WSS on HWSS, 1 with intractible escort
+    <li>10 HWSS on 12WSS on HWSS, 4 with intractible escort
+</ul><br><br>
+
+<a name="13wss flotilla"></a>
+<h3>Thirteen-long overweight spaceship flotillae</h3>
+There are several three-spaceship flotillae including thirteen-long overweight
+spaceships (13WSS).  At present, none of these can be synthesized.<br><br>
+
+<ul>
+    <li>1 MWSS on 13WSS on MWSS
+    <li>1 MWSS on 13WSS on HWSS
+    <li>1 HWSS on 13WSS on HWSS
+</ul><br><br>
+
+<a name="14wss flotilla"></a>
+<h3>Fourteen-long overweight spaceship flotillae</h3>
+There is one three-spaceship flotilla including a fourteen-long overweight
+spaceship (14WSS).  At present, this cannot be synthesized.<br><br>
+
+<ul>
+    <li>1 HWSS on 14WSS on HWSS
+</ul><br><br>
+
+<hr>
+<a name="puffer"></a>
+<h2>Puffer Trains</h2>
+These are some of the simplest known puffer train engines.  All produce plumes
+which can be modified in many different ways to produce different kinds of
+exhaust, by adding nearby spaceships or other puffer trains.<br><br>
+<a href="puffers.rle"><img src="puffers.gif" alt="puffer trains"
+ width=601 height=481 usemap="#puffer"></a><br>
+<table cellspacing=1 border=1>
+    <tr>
+	<td valign=top width=117><a href="p24djb.rle">
+	    Buckingham's P24 puffer [9]</a></td>
+	<td valign=top width=117><a href="28coelw.rle">
+	    Coe's P16 puffer [8]</a></td>
+	<td valign=top width=117><a href="p20rwg.rle">
+	    Gosper's P20 puffer [9]</a></td>
+	<td valign=top width=117><a href="39lwsslw.rle">
+	    Schick ship [10]</a></td>
+	<td valign=top width=119><a href="p8rtw.rle">
+	    Wainwright's P8 puffer [10]</a></td>
+    </tr>
+
+    <tr>
+	<td valign=top width=117><a href="12swbk.rle">
+	    Corderman's block-producing switch engine [5]</a></td>
+	<td valign=top width=117></td>
+	<td valign=top width=117><a href="12swgl.rle">
+	    Corderman's glider-producing switch engine [5]</a></td>
+	<td valign=top width=117></td>
+	<td valign=top width=119><a href="16na.rle">
+	    Noah's Ark [8]</a></td>
+    </tr>
+</table><br>
+
+<map name="puffer">
+	<area shape=rect coords="0,0,119,239" href="p24djb.rle">
+	<area shape=rect coords="120,0,239,239" href="28coelw.rle">
+	<area shape=rect coords="240,0,359,239" href="p20rwg.rle">
+	<area shape=rect coords="360,0,479,239" href="39lwsslw.rle">
+	<area shape=rect coords="480,0,601,239" href="p8rtw.rle">
+
+	<area shape=rect coords="0,240,239,481" href="12swbk.rle">
+	<area shape=rect coords="240,240,439,481" href="12swgl.rle">
+	<area shape=rect coords="440,240,601,459" href="16na.rle">
+	<area shape=rect coords="440,460,579,481" href="16na.rle">
+	<area shape=rect coords="580,460,601,481" href="puffers.rle">
+</map>
+
+<hr>
+<b>Other types:</b>
+	<a href="still.htm">still-lifes</a>,
+	<a href="pstill.htm">pseudo-still-lifes</a>,
+	<a href="oscillat.htm">oscillators and pseudo-oscillators</a>,
+	spaceships,
+	<a href="constell.htm">constellations</a>,
+	<a href="metheus.htm">metheuselahs</a>.<br><br>
+
+<b>See also:</b>  Life objects sorted by:
+	<a href="objcount.htm">counts</a>,
+	<a href="objcost.htm">gliders</a>,
+	<a href="objname.htm">name</a>,
+	<a href="objsize.htm">size</a>,
+	or <a href="objtype.htm">type</a>.<br><br>
+
+<a href="index.htm">
+<img src="homepage.gif" alt="home" align=middle width=32 height=32>
+Back to Home Page</a>
+<a href="lifepage.htm">
+<img src="lifepage.gif" alt="life" align=middle width=32 height=32>
+Back to Life Page</a><br><br>
+
+</body></html>
+
+<!-- Localized -->
