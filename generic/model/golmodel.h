@@ -29,7 +29,7 @@ public:
     Status data(coord_t x, coord_t y) const;
 
     void setData(const point_t& point, Status value);
-    void setData(coord_t y, coord_t y, Status value);
+    void setData(coord_t x, coord_t y, Status value);
 
     void nextGeneration();
 

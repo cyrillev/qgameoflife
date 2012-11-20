@@ -80,7 +80,7 @@ std::size_t hash_value(GolModel::status_t const& status)
     std::size_t seed = 0;
     boost::hash_combine(seed, point.first);
     boost::hash_combine(seed, point.second);
-    boost::hash_combine(seed, status.second);
+    boost::hash_combine(seed, (int) status.second);
     return seed;
 }
 
