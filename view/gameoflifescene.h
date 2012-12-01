@@ -18,7 +18,7 @@ public:
     void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent);
 
     void addSelectedPatternAt(const QPointF &pos);
-    void onCellChanged(const point_t point, GolModel::Status status);
+    void onCellChanged(const point_t point, bool value);
 
 
 signals:

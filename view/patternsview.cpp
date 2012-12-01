@@ -13,6 +13,8 @@ PatternsView::PatternsView(QWidget *parent) :
 
 void PatternsView::currentChanged(const QModelIndex &current, const QModelIndex &previous)
 {
+    Q_UNUSED(previous);
+
     QVariant variant = current.data(GameOfLifePatternModel::GenGolPatternRole);
     GameOfLifePatternWrapper wrapper = variant.value<GameOfLifePatternWrapper>();
 

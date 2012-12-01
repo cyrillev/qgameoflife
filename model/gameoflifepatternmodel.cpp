@@ -20,6 +20,7 @@ GameOfLifePatternModel::GameOfLifePatternModel(QObject *parent)
 
 int GameOfLifePatternModel::rowCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
     return _model.size();
 }
 
@@ -35,7 +36,7 @@ QVariant GameOfLifePatternModel::data(const QModelIndex &index, int role) const
     if (!index.isValid())
         return QVariant();
 
-    if (index.row() >= _model.size())
+    if (static_cast<size_t>(index.row()) >= _model.size())
         return QVariant();
 
     GenGolPatternPtr pattern = _model.get(index.row());
@@ -69,6 +70,8 @@ QVariant GameOfLifePatternModel::data(const QModelIndex &index, int role) const
 QVariant GameOfLifePatternModel::headerData(int section, Qt::Orientation orientation,
                                             int role) const
 {
+    Q_UNUSED(section);
+
     if (role != Qt::DisplayRole)
         return QVariant();
 

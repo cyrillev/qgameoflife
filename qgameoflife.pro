@@ -20,7 +20,9 @@ SOURCES += main.cpp\
     generic/model/genericgameoflifepatternmodel.cpp \
     model/cellpainter.cpp \
     view/patternsview.cpp \
-    view/cellgraphicsitem.cpp
+    view/cellgraphicsitem.cpp \
+    generic/model/golquadtree.cpp \
+    generic/model/golsetmodel.cpp
 
 HEADERS  += mainwindow.h \
     view/gameoflifeview.h \
@@ -30,7 +32,10 @@ HEADERS  += mainwindow.h \
     generic/model/genericgameoflifepatternmodel.h \
     model/cellpainter.h \
     view/patternsview.h \
-    view/cellgraphicsitem.h
+    view/cellgraphicsitem.h \
+    generic/model/golquadtree.h \
+    generic/model/goltypes.h \
+    generic/model/golsetmodel.h
 
 FORMS    += mainwindow.ui
 

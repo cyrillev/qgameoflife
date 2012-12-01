@@ -8,7 +8,7 @@
 
 GameOfLifeScene::GameOfLifeScene(qreal x, qreal y, qreal width, qreal height, QObject *parent) :
     QGraphicsScene(x, y, width, height, parent),
-    _model()
+    _model( GolModel::UNORDERED_SET )
 {
     connect(&_timer, SIGNAL(timeout()),
             this,   SLOT(requestNewGeneration()));
@@ -37,23 +37,23 @@ void GameOfLifeScene::addSelectedPatternAt(const QPointF &pos)
     for (it = cells.begin(); it != cells.end(); ++it)
     {
         point_t point = (*it);
-        const coord_t x = static_cast<coord_t>(pos.x() + point.first);
-        const coord_t y = static_cast<coord_t>(pos.y() + point.second);
-        _model.setData(x, y, GolModel::ALIVE);
+        const coord_t x = static_cast<coord_t>(pos.x() + point.x);
+        const coord_t y = static_cast<coord_t>(pos.y() + point.y);
+        _model.setData(x, y, true);
     }
 }
 
-void GameOfLifeScene::onCellChanged(const point_t point, GolModel::Status status)
+void GameOfLifeScene::onCellChanged(const point_t point, bool value)
 {
-    if (status == GolModel::ALIVE)
+    if (value)
     {
         CellGraphicsItem * item = new CellGraphicsItem();
         addItem(item); // This scene takes ownership of the item.
-        item->setPos(point.first, point.second);
+        item->setPos(point.x, point.y);
     }
     else
     {
-        QGraphicsItem * item = itemAt(point.first, point.second );
+        QGraphicsItem * item = itemAt(point.x, point.y );
         removeItem(item);
     }
 }
@@ -121,11 +121,13 @@ void GameOfLifeScene::dragEnterEvent( QGraphicsSceneDragDropEvent * event )
 
 void GameOfLifeScene::dragLeaveEvent( QGraphicsSceneDragDropEvent * event )
 {
+    Q_UNUSED(event);
     QApplication::restoreOverrideCursor();
 }
 
 void GameOfLifeScene::dragMoveEvent( QGraphicsSceneDragDropEvent * event )
 {
+    Q_UNUSED(event);
     // Set the drop action to be the proposed action.
     event->acceptProposedAction();
 }

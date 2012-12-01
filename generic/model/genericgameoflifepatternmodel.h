@@ -1,6 +1,9 @@
 #ifndef GENERICGAMEOFLIFEPATTERNMODEL_H
 #define GENERICGAMEOFLIFEPATTERNMODEL_H
 
+#include "goltypes.h"
+#include "golmodel.h"
+
 #include <string>
 #include <vector>
 #include <exception>
@@ -11,8 +14,8 @@
 #include <boost/utility.hpp>
 #include <boost/filesystem.hpp>
 
-#include "golmodel.h"
-
+namespace gol
+{
 class GenGolPattern;
 typedef std::tr1::shared_ptr<const GenGolPattern> GenGolPatternPtr;
 
@@ -63,4 +66,5 @@ protected:
     std::string _rle_pattern;
 };
 
+}
 #endif // GENERICGAMEOFLIFEPATTERNMODEL_H

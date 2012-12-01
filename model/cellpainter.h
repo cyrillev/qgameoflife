@@ -5,10 +5,11 @@
 
 class QIcon;
 
+
 class CellPainter
 {
 public:
-    static QIcon makeIcon(GenGolPatternPtr pattern, size_t size, size_t margin);
+    static QIcon makeIcon(gol::GenGolPatternPtr pattern, size_t size, size_t margin);
 };
 
 #endif // CELLPAINTER_H

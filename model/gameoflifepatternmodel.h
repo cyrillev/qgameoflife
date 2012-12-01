@@ -1,13 +1,14 @@
 #ifndef GAMEOFLIFEPATTERNMODEL_H
 #define GAMEOFLIFEPATTERNMODEL_H
 
+#include "generic/model/genericgameoflifepatternmodel.h"
+
 #include <QAbstractListModel>
 #include <QStringList>
 
-
 #include <boost/ptr_container/ptr_vector.hpp>
 
-#include "generic/model/genericgameoflifepatternmodel.h"
+using namespace gol;
 
 class GameOfLifePatternWrapper
 {

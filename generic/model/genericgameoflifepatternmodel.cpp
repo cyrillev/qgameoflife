@@ -16,11 +16,14 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/range/irange.hpp>
 #include <boost/filesystem.hpp>
+#include <boost/foreach.hpp>
 
+using namespace gol;
 using namespace std;
 using namespace std::tr1;
 using namespace boost;
-using namespace boost::filesystem;
+
+namespace fs = boost::filesystem;
 
 
 GenGolPattern::GenGolPattern(const string& name, coord_t width, coord_t height, const string &rle_pattern)
@@ -81,7 +84,7 @@ vector<point_t> GenGolPattern::cells() const
             coord_t limit = x + occurences;
             for (; x < limit; ++x )
             {
-                pattern.push_back(make_pair(x,y));
+                pattern.push_back(point_t(x,y));
             }
             break;
         case 'b':
@@ -132,9 +135,9 @@ GenGolPattern::GenGolPattern(const filesystem::path& filename)
     _height = height;
     _rle_pattern = string((istreambuf_iterator<char>(rlefile)), istreambuf_iterator<char>());
     _rle_pattern.erase( remove_if( _rle_pattern.begin(),
-                             _rle_pattern.end(),
-                             IsJunk),
-                  _rle_pattern.end());
+                                   _rle_pattern.end(),
+                                   IsJunk),
+                        _rle_pattern.end());
 }
 
 
@@ -163,11 +166,11 @@ const GenGolPatternPtr GenGolPatternModel::get(size_t index) const
 class predicate
 {
 public:
-   predicate(const std::string& name) : _name(name) {}
-   bool operator()(GenGolPatternPtr pattern) { return pattern->name() == _name; }
+    predicate(const std::string& name) : _name(name) {}
+    bool operator()(GenGolPatternPtr pattern) { return pattern->name() == _name; }
 
 private:
-   const std::string _name;
+    const std::string _name;
 };
 
 const GenGolPatternPtr GenGolPatternModel::get(const std::string& name) const
@@ -196,22 +199,46 @@ GenGolPatternModel::GenGolPatternModel()
 
 void GenGolPatternModel::addDirectory(const filesystem::path &directory, bool recursive)
 {
-    if (is_directory(directory))
+    if (fs::is_directory(directory))
     {
-        directory_iterator end_itr;
-        for (directory_iterator it(directory); it != end_itr; ++it)
+        // FIXME: if possible, refactor recursive/non-recusrive code below.
+        if (recursive)
         {
-            path p(*it);
-            if ( p.extension() == ".rle" )
+            fs::recursive_directory_iterator dir(directory), eod;
+            BOOST_FOREACH (fs::path const & p, std::make_pair(dir, eod))
             {
-                try
+                if ( p.extension() == ".rle" )
                 {
-                    _model.push_back( GenGolPatternPtr(new GenGolPattern(*it)) );
-                } catch(...)
-                {
-                    std::cout << "got exception while reading RLE file " << p << std::endl;
+                    try
+                    {
+                        _model.push_back( GenGolPatternPtr(new GenGolPattern(*dir)) );
+                    } catch(...)
+                    {
+                        std::cout << "got exception while reading RLE file " << p << std::endl;
+                    }
                 }
             }
         }
+        else
+        {
+            fs::directory_iterator dir(directory), eod;
+            BOOST_FOREACH (fs::path const & p, std::make_pair(dir, eod))
+            {
+                if ( p.extension() == ".rle" )
+                {
+                    try
+                    {
+                        _model.push_back( GenGolPatternPtr(new GenGolPattern(*dir)) );
+                    } catch(...)
+                    {
+                        std::cout << "got exception while reading RLE file " << p << std::endl;
+                    }
+                }
+            }
+        }
+    }
+    else
+    {
+        // TODO: throw exception?
     }
 }
