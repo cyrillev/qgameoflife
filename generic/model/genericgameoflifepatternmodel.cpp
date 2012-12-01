@@ -77,18 +77,24 @@ vector<point_t> GenGolPattern::cells() const
         switch (c)
         {
         case '$':
+        {
             x = 0;
             y++;
+        }
             break;
         case 'o':
+        {
             coord_t limit = x + occurences;
             for (; x < limit; ++x )
             {
                 pattern.push_back(point_t(x,y));
             }
+        }
             break;
         case 'b':
+        {
             x += occurences;
+        }
             break;
         }
 
