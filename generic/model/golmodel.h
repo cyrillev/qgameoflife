@@ -2,12 +2,12 @@
 #define GOLMODEL_H
 
 #include "goltypes.h"
-#include "golsetmodel.h"
+#include "golmodelinterface.h"
 
-#include <boost/utility.hpp>
+#include <boost/noncopyable.hpp>
+#include <boost/scoped_ptr.hpp>
 #include <boost/signals2.hpp>
 #include <boost/signals2/connection.hpp>
-#include <boost/unordered_set.hpp>
 
 namespace gol
 {
@@ -22,14 +22,13 @@ public:
 
     GolModel(Algorithm algo);
 
-    bool data(const point_t &point) const;
-    bool data(coord_t x, coord_t y) const;
+    bool get(const point_t &point) const;
+    bool get(coord_t x, coord_t y) const;
 
-    void setData(const point_t& point, bool value);
-    void setData(coord_t y, coord_t y, bool value);
+    void set(const point_t& point);
+    void set(coord_t y, coord_t y);
 
     void nextGeneration();
-
 
     // connection to change events
     typedef boost::signals2::signal<void (const point_t, bool)>  signal_t;
@@ -39,7 +38,7 @@ public:
 
 private:
     signal_t  _signalCellChanged;
-    boost::scoped_ptr<gol::GolSetModel> _implementation;
+    boost::scoped_ptr<gol::GolModelInterface> _implementation;
 };
 
 };

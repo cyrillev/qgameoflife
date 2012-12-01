@@ -1,49 +1,48 @@
 #include "golmodel.h"
-#include <stdexcept>
-#include <QTimer>
+#include "golsetmodel.h"
+#include "golquadtree.h"
 
 #include <boost/unordered_set.hpp>
 #include <boost/foreach.hpp>
 
 using namespace gol;
 
-
-typedef boost::unordered_set<point_t>::iterator iterator;
-typedef boost::unordered_set<point_t>::const_iterator const_iterator;
-
 GolModel::GolModel(Algorithm algo)
 {
     switch (algo)
     {
     case UNORDERED_SET:
-        _implementation.reset( new gol::GolSetModel());
+        _implementation.reset( new GolSetModel());
+        break;
+    case QUAD_TREE:
+        _implementation.reset( new GolQuadtree(100000,100000));
         break;
     }
 }
 
-bool GolModel::data(const point_t &point) const
+bool GolModel::get(const point_t &point) const
 {
-    return _implementation->data( point );
+    return _implementation->get( point );
 }
 
-bool GolModel::data(coord_t x, coord_t y) const
+bool GolModel::get(coord_t x, coord_t y) const
 {
-    return _implementation->data( point_t(x, y) );
+    return _implementation->get( point_t(x, y) );
 }
 
-void GolModel::setData(const point_t &point, bool value)
+void GolModel::set(const point_t &point)
 {
-    if (value != data(point))
+    if (!get(point))
     {
-        _implementation->setData(point, value);
-        _signalCellChanged(point, value);
+        _implementation->set(point);
+        _signalCellChanged(point, true);
     }
 }
 
 
-void GolModel::setData(coord_t x, coord_t y, bool value)
+void GolModel::set(coord_t x, coord_t y)
 {
-    setData(point_t(x, y), value);
+    set( point_t(x, y) );
 }
 
 

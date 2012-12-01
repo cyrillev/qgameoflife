@@ -1,7 +1,7 @@
 #ifndef GOLSETMODEL_H
 #define GOLSETMODEL_H
 
-#include "goltypes.h"
+#include "golmodelinterface.h"
 
 #include <boost/utility.hpp>
 #include <boost/signals2.hpp>
@@ -11,13 +11,15 @@
 namespace gol
 {
 
-class GolSetModel : boost::noncopyable
+class GolSetModel : public GolModelInterface
 {
 public:
     GolSetModel();
 
-    bool data(const point_t &point) const;
-    void setData(const point_t& point, bool value);
+    // Implement GolModelInterface
+    bool get(const point_t &point) const;
+    void set(const point_t& point);
+    void unset(const point_t& point);
     void nextGeneration(boost::unordered_set<point_t> &new_cells, boost::unordered_set<point_t> &dead_cells);
 
 private:

@@ -8,7 +8,7 @@
 
 GameOfLifeScene::GameOfLifeScene(qreal x, qreal y, qreal width, qreal height, QObject *parent) :
     QGraphicsScene(x, y, width, height, parent),
-    _model( GolModel::UNORDERED_SET )
+    _model( GolModel::QUAD_TREE )
 {
     connect(&_timer, SIGNAL(timeout()),
             this,   SLOT(requestNewGeneration()));
@@ -39,7 +39,7 @@ void GameOfLifeScene::addSelectedPatternAt(const QPointF &pos)
         point_t point = (*it);
         const coord_t x = static_cast<coord_t>(pos.x() + point.x);
         const coord_t y = static_cast<coord_t>(pos.y() + point.y);
-        _model.setData(x, y, true);
+        _model.set(x, y);
     }
 }
 

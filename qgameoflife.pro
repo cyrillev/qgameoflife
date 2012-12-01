@@ -22,7 +22,10 @@ SOURCES += main.cpp\
     view/patternsview.cpp \
     view/cellgraphicsitem.cpp \
     generic/model/golquadtree.cpp \
-    generic/model/golsetmodel.cpp
+    generic/model/golsetmodel.cpp \
+    generic/model/golquadtreenodebase.cpp \
+    generic/model/golquadtreenodeleaf.cpp \
+    generic/model/golquadtreenode.cpp
 
 HEADERS  += mainwindow.h \
     view/gameoflifeview.h \
@@ -35,7 +38,11 @@ HEADERS  += mainwindow.h \
     view/cellgraphicsitem.h \
     generic/model/golquadtree.h \
     generic/model/goltypes.h \
-    generic/model/golsetmodel.h
+    generic/model/golsetmodel.h \
+    generic/model/golquadtreenodebase.h \
+    generic/model/golquadtreenodeleaf.h \
+    generic/model/golquadtreenode.h \
+    generic/model/golmodelinterface.h
 
 FORMS    += mainwindow.ui
 
