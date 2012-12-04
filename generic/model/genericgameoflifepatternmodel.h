@@ -23,22 +23,40 @@ typedef std::tr1::shared_ptr<const GenGolPattern> GenGolPatternPtr;
 
 class gengol_rle_exception : public std::exception
 {
-    virtual const char* what() const throw()
-    {
-        return "Error when parsing Game Of life's RLE file";
-    }
+    virtual const char* what() const throw();
 };
 
+
+
+/**
+ * This class maintains a collection of Game of Life's patterns
+ * Patterns are loaded from RLE Game of Life's files
+ */
 class GenGolPatternModel
 {
 public:
     GenGolPatternModel();
 
-     void addDirectory(const boost::filesystem::path& directory, bool recursive = false);
-     void addFile(const boost::filesystem::path& filename);
+    /**
+     * load the given file and add the pattern to the collection.
+     * may throw gengol_rle_exception
+     */
+    void loadFile(const boost::filesystem::path& filename);
 
+    /**
+     * load all RLE files within the directory and sub-directories (if recursive)
+     * and add the patterns to the collection.
+     * may throw gengol_rle_exception
+     */
+     void LoadDirectory(const boost::filesystem::path& directory, bool recursive = false);
+
+     /** return the size of the collection of patterns */
      size_t size() const;
+
+     /** return the pattern at the given index (or a null pattern if index is out-of-bound) */
      const GenGolPatternPtr get(size_t index) const;
+
+     /** find the pattern with the given name (or a null pattern if index is out-of-bound) */
      const GenGolPatternPtr get(const std::string& name) const;
 
 private:
@@ -46,6 +64,10 @@ private:
      const GenGolPatternPtr _null_pattern;
 };
 
+
+/**
+ * This class represents a Game of Life's patterns
+ */
 class GenGolPattern : boost::noncopyable
 {
 public:

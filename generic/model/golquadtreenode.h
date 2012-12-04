@@ -6,6 +6,13 @@
 
 namespace gol
 {
+
+/**
+ * Each GolQuadtreeNode has exactly 4 children,
+ * one for each cardinal direction.
+ *
+*/
+
 class GolQuadtreeNode : public GolQuadtreeNodeBase
 {
 public:
@@ -21,6 +28,7 @@ public:
     GolQuadtreeNode(coord_t x, coord_t y, coord_t width, coord_t  height, golquadtreenode_weakptr parent);
     virtual ~GolQuadtreeNode();
 
+    /** Implement GolModelInterface */
     void set(coord_t x, coord_t y);
     bool unset(coord_t x, coord_t y);
     bool get(coord_t x, coord_t y)  const;

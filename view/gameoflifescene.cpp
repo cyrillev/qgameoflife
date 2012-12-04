@@ -6,6 +6,8 @@
 #include "model/gameoflifepatternmodel.h"
 #include "view/cellgraphicsitem.h"
 
+#include <boost/foreach.hpp>
+
 GameOfLifeScene::GameOfLifeScene(qreal x, qreal y, qreal width, qreal height, QObject *parent) :
     QGraphicsScene(x, y, width, height, parent),
     _model( GolModel::QUAD_TREE )
@@ -18,7 +20,7 @@ GameOfLifeScene::GameOfLifeScene(qreal x, qreal y, qreal width, qreal height, QO
     // Adding, moving and removing items, however, is done in constant time.
     // This approach is ideal for dynamic scenes,
     // where many items are added, moved or removed continuously.
-    // setItemIndexMethod(QGraphicsScene::NoIndex);
+    setItemIndexMethod(QGraphicsScene::NoIndex);
 
     _connection = _model.connect(
                 boost::bind( &GameOfLifeScene::onCellChanged, this, _1, _2) );
@@ -63,9 +65,24 @@ void GameOfLifeScene::Start()
     _timer.start();
 }
 
+void GameOfLifeScene::Stop()
+{
+    _timer.stop();
+}
+
 void GameOfLifeScene::requestNewGeneration()
 {
-    _model.nextGeneration();
+    Result result = _model.nextGeneration();
+
+    BOOST_FOREACH(point_t new_cell, result.new_cells)
+    {
+        onCellChanged(new_cell, true);
+    }
+
+    BOOST_FOREACH(point_t dead_cell, result.dead_cells)
+    {
+        onCellChanged(dead_cell, false);
+    }
 }
 
 

@@ -46,19 +46,13 @@ void GolModel::set(coord_t x, coord_t y)
 }
 
 
-void GolModel::nextGeneration()
+Result GolModel::nextGeneration()
 {
-    boost::unordered_set<point_t> new_cells, dead_cells;
-    _implementation->nextGeneration(new_cells, dead_cells);
+    Result result;
 
-    BOOST_FOREACH( point_t cell, new_cells )
-    {
-        _signalCellChanged(cell, true);
-    }
-    BOOST_FOREACH( point_t cell, dead_cells )
-    {
-        _signalCellChanged(cell, false);
-    }
+    _implementation->nextGeneration(result.new_cells, result.dead_cells);
+
+    return result;
 }
 
 

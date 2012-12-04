@@ -15,7 +15,12 @@ GameOfLifePatternModel::GameOfLifePatternModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     setSupportedDragActions(Qt::MoveAction);
-    _model.addDirectory( boost::filesystem::path("/Users/cyrille/rle/") );
+}
+
+void GameOfLifePatternModel::loadDirectory(QString directory)
+{
+    _model.LoadDirectory( boost::filesystem::path(directory.toStdString()) );
+    reset();
 }
 
 int GameOfLifePatternModel::rowCount(const QModelIndex &parent) const
@@ -49,7 +54,10 @@ QVariant GameOfLifePatternModel::data(const QModelIndex &index, int role) const
     }
     case  Qt::DecorationRole:
     {
-        QIcon icon = CellPainter::makeIcon(pattern, 5, 1);
+        QIcon icon;
+        // FIXME : too slow to generate icon
+        // the resut must be cached
+        // icon = CellPainter::makeIcon(pattern, 5, 1);
         return icon;
     }
     case GenGolPatternRole:

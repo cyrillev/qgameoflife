@@ -93,7 +93,7 @@ void GolQuadtreeNodeLeaf::nextGeneration(boost::unordered_set<point_t>& new_cell
                 {
                     if (dead_cells.insert( point_t(i+x(), j+y()) ).second)
                     {
-                        std::cout << " => " << i+x() << "," << j+y() << " is dead" << std::endl;
+                        // std::cout << " => " << i+x() << "," << j+y() << " is dead" << std::endl;
                     }
                 }
 
@@ -110,7 +110,7 @@ void GolQuadtreeNodeLeaf::nextGeneration(boost::unordered_set<point_t>& new_cell
                         {
                             if (new_cells.insert( point_t(i1+x(), j1+y()) ).second)
                             {
-                                std::cout << " => " << i1+x() << "," << j1+y() << " is born" << std::endl;
+                                // std::cout << " => " << i1+x() << "," << j1+y() << " is born" << std::endl;
                             }
                         }
                     }

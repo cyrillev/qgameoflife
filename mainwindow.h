@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 class GameOfLifeScene;
+class GameOfLifePatternModel;
 
 namespace Ui {
 class MainWindow;
@@ -25,9 +26,14 @@ private slots:
     void on_actionZoom_Out_triggered();
     void on_actionZoom_In_triggered();
 
+    void on_actionLoad_triggered();
+
+    void on_actionStop_triggered();
+
 private:
     Ui::MainWindow *ui;
     GameOfLifeScene * scene;
+    GameOfLifePatternModel * model;
 };
 
 #endif // MAINWINDOW_H

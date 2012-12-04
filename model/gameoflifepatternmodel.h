@@ -39,6 +39,8 @@ public:
 
     GameOfLifePatternModel(QObject *parent = 0);
 
+    void loadDirectory(QString directory);
+
     // Implement QAbstractListModel
     int rowCount(const QModelIndex &parent = QModelIndex()) const;
     QVariant data(const QModelIndex &index, int role) const;

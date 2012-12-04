@@ -26,6 +26,12 @@ using namespace boost;
 namespace fs = boost::filesystem;
 
 
+const char* gengol_rle_exception::what() const throw()
+{
+    return "Error when parsing Game Of life's RLE file";
+}
+
+
 GenGolPattern::GenGolPattern(const string& name, coord_t width, coord_t height, const string &rle_pattern)
     : _name(name), _width(width), _height(height), _rle_pattern(rle_pattern)
 {
@@ -147,7 +153,7 @@ GenGolPattern::GenGolPattern(const filesystem::path& filename)
 }
 
 
-void GenGolPatternModel::addFile(const filesystem::path &filename)
+void GenGolPatternModel::loadFile(const filesystem::path &filename)
 {
     GenGolPatternPtr pattern = GenGolPatternPtr(new GenGolPattern(filename));
     _model.push_back(pattern);
@@ -203,7 +209,7 @@ GenGolPatternModel::GenGolPatternModel()
     _model.push_back( GenGolPatternPtr(new GenGolPattern("Cell", 1, 1, "o") ) );
 }
 
-void GenGolPatternModel::addDirectory(const filesystem::path &directory, bool recursive)
+void GenGolPatternModel::LoadDirectory(const filesystem::path &directory, bool recursive)
 {
     if (fs::is_directory(directory))
     {

@@ -25,8 +25,7 @@ signals:
 
 public slots:
     void Start();
-    void requestNewGeneration();
-
+    void Stop();
     void patternSelected(const GenGolPatternPtr &pattern);
 
 protected:
@@ -34,6 +33,9 @@ protected:
     virtual void dragEnterEvent( QGraphicsSceneDragDropEvent * event );
     virtual void dragLeaveEvent( QGraphicsSceneDragDropEvent * event );
     virtual void dragMoveEvent( QGraphicsSceneDragDropEvent * event );
+
+private slots:
+    void requestNewGeneration();
 
 private:
     QTimer _timer;
